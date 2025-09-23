@@ -6,5 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "jupyterlab>=4.4.7",
+    "networkx>=3.5",
+    "openpyxl>=3.1.5",
     "turingdb>=0.2.4",
 ]
