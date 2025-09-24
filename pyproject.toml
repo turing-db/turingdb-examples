@@ -5,8 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "anthropic>=0.68.0",
     "jupyterlab>=4.4.7",
+    "mistralai>=1.9.10",
     "networkx>=3.5",
+    "openai>=1.109.1",
     "openpyxl>=3.1.5",
-    "turingdb>=0.2.4",
+    "turingdb>=0.2.5",
 ]
