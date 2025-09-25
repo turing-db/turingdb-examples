@@ -1,7 +1,7 @@
 [project]
 name = "turingdb-examples"
 version = "0.1.0"
-description = "Add your description here"
+description = "Examples and tutorials for TuringDB usage"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -13,3 +13,7 @@ dependencies = [
     "openpyxl>=3.1.5",
     "turingdb>=0.2.5",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
