@@ -1,4 +1,4 @@
-Line,Order,From_Station,To_Station,Total,PM Peak   ,Evening   ,Late      
+Line,Order,From_Station,To_Station,Total,PM Peak   ,Evening   ,Late
 Bakerloo,1,Elephant and Castle,Lambeth North,"13,432","4,118","1,288",398
 Bakerloo,2,Lambeth North,Waterloo ,"18,597","5,718","1,916",580
 Bakerloo,3,Waterloo ,Embankment,"46,020","13,746","4,609","1,466"

@@ -6,7 +6,7 @@
 # Daily development
 uv run pytest              # Quick check before commit
 
-# Weekly/when adding new examples  
+# Weekly/when adding new examples
 uv run pytest --cov       # Check coverage
 
 # When debugging issues
