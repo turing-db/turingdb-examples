@@ -273,6 +273,18 @@ wheels = [
 ]
 
 [[package]]
+name = "click"
+version = "8.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz", hash = "sha256:e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4", size = 276943, upload-time = "2025-09-18T17:32:23.696Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/db/d3/9dcc0f5797f070ec8edf30fbadfb200e71d9db6b84d211e3b2085a7589a0/click-8.3.0-py3-none-any.whl", hash = "sha256:9b9f285302c6e3064f4330c05f05b81945b2a39544279343e6e7c5f27a9baddc", size = 107295, upload-time = "2025-09-18T17:32:22.42Z" },
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
@@ -1836,17 +1848,19 @@ wheels = [
 
 [[package]]
 name = "turingdb"
-version = "0.2.5"
+version = "0.2.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "click" },
     { name = "httpx" },
     { name = "orjson" },
     { name = "pandas" },
     { name = "pandas-stubs" },
+    { name = "prompt-toolkit" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/52/cb/99a1a0f4eb90383a56c2ad00e8a570b794a7d3a7c4db5edaa9d46e492ef0/turingdb-0.2.5.tar.gz", hash = "sha256:e3e5390fdee5d1c43dc8e4e4023d61078240e213bf7a14a57dd0de59f3e8e08b", size = 43060, upload-time = "2025-09-24T07:05:48.046Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/77/0c/11f4595a7dcd3c22e3330c59a99d596873eb4d18256fc0918f2632ccf2e6/turingdb-0.2.6.tar.gz", hash = "sha256:aaa1b7363a64a859385c76060d976f09bb4b16080155586b95674b025d904fe2", size = 72925, upload-time = "2025-10-01T12:54:27.283Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/da/2c/0936d7498c52b26a5b8738c9ef55b84b1a858071a2f27a39ee19332355dc/turingdb-0.2.5-py3-none-any.whl", hash = "sha256:6059239392c13a80fc9668dc70de2a41ecba5c436a75ccb6daec1ef57feb952d", size = 4266, upload-time = "2025-09-24T07:05:47.053Z" },
+    { url = "https://files.pythonhosted.org/packages/6a/01/c39ccada8b62099cc6a0bafd309f284f8424c590780a0f6ac272823a68ff/turingdb-0.2.6-py3-none-any.whl", hash = "sha256:f8e06b20bc8da2673339e5cb7a0b6efccef3f9750d234bcefb0801b25e24b716", size = 8069, upload-time = "2025-10-01T12:54:26.283Z" },
 ]
 
 [[package]]
@@ -1884,7 +1898,7 @@ requires-dist = [
     { name = "pre-commit", specifier = ">=4.3.0" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "ruff", specifier = ">=0.13.2" },
-    { name = "turingdb", specifier = ">=0.2.5" },
+    { name = "turingdb", specifier = "==0.2.6" },
 ]
 
 [package.metadata.requires-dev]
