@@ -14,7 +14,7 @@ dependencies = [
     "pre-commit>=4.3.0",
     "python-dotenv>=1.1.1",
     "ruff>=0.13.2",
-    "turingdb>=0.2.5",
+    "turingdb==0.2.6",
 ]
 
 keywords = ["turingdb", "examples", "database"]
