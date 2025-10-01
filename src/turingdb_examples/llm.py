@@ -1,4 +1,11 @@
-def query_llm(prompt, system_prompt=None, provider="OpenAI", model=None, api_key=None):
+def query_llm(
+    prompt,
+    system_prompt=None,
+    provider="OpenAI",
+    model=None,
+    api_key=None,
+    temperature=0.0,
+):
     """Simple LLM query function with optional system prompt"""
 
     if provider == "OpenAI":
@@ -11,7 +18,9 @@ def query_llm(prompt, system_prompt=None, provider="OpenAI", model=None, api_key
             messages.append({"role": "system", "content": system_prompt})
         messages.append({"role": "user", "content": prompt})
 
-        response = client.chat.completions.create(model=model, messages=messages)
+        response = client.chat.completions.create(
+            model=model, messages=messages, temperature=temperature
+        )
         return response.choices[0].message.content
 
     elif provider == "Mistral":
@@ -24,7 +33,9 @@ def query_llm(prompt, system_prompt=None, provider="OpenAI", model=None, api_key
             messages.append({"role": "system", "content": system_prompt})
         messages.append({"role": "user", "content": prompt})
 
-        response = client.chat.complete(model=model, messages=messages)
+        response = client.chat.complete(
+            model=model, messages=messages, temperature=temperature
+        )
         return response.choices[0].message.content
 
     elif provider == "Anthropic":
@@ -38,6 +49,7 @@ def query_llm(prompt, system_prompt=None, provider="OpenAI", model=None, api_key
             system=system_prompt or "",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=4096,
+            temperature=temperature,
         )
         return response.content[0].text
 
