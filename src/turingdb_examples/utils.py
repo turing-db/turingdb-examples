@@ -1,4 +1,5 @@
 import re
+import pandas as pd
 
 
 def create_ID_column(df_):
@@ -20,3 +21,21 @@ def get_return_statements(query):
         return return_statement.split(", ")
     else:
         print("No RETURN clause found")
+
+
+def escape_for_cypher(value):
+    if pd.isna(value):  # Handle NaN/None
+        return ""
+    if not isinstance(value, str):
+        return str(value)
+
+    # Escape backslashes first (most important!)
+    value = value.replace("\\", "\\\\")
+    # Escape double quotes
+    value = value.replace('"', '\\"')
+    # Escape newlines and other control characters
+    value = value.replace("\n", "\\n")
+    value = value.replace("\r", "\\r")
+    value = value.replace("\t", "\\t")
+
+    return value
