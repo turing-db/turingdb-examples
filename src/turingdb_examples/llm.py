@@ -58,11 +58,21 @@ def query_llm(
 
 
 def natural_language_to_cypher(
-    question, system_prompt, provider="OpenAI", api_key=None
+    question,
+    system_prompt,
+    provider="OpenAI",
+    model=None,
+    api_key=None,
+    temperature=0.0,
 ):
     """Convert natural language question to Cypher query"""
     cypher_query = query_llm(
-        prompt=question, system_prompt=system_prompt, provider=provider, api_key=api_key
+        prompt=question,
+        system_prompt=system_prompt,
+        provider=provider,
+        model=model,
+        api_key=api_key,
+        temperature=temperature,
     )
 
     return cypher_query.strip()
