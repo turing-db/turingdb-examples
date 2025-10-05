@@ -1,0 +1,865 @@
+Line,Order,From_Station,To_Station,Total,PM Peak   ,Evening   ,Late
+Bakerloo,1,Elephant & Castle ,Lambeth North,"13,432","4,118","1,288",398
+Bakerloo,2,Lambeth North,Waterloo ,"18,597","5,718","1,916",580
+Bakerloo,3,Waterloo ,Embankment,"46,020","13,746","4,609","1,466"
+Bakerloo,4,Embankment,Charing Cross ,"55,475","17,155","5,959","1,940"
+Bakerloo,5,Charing Cross ,Piccadilly Circus,"63,929","20,112","7,712","3,035"
+Bakerloo,6,Piccadilly Circus,Oxford Circus,"78,889","25,117","13,140","6,971"
+Bakerloo,7,Oxford Circus,Regent's Park,"80,090","27,291","15,471","7,124"
+Bakerloo,8,Regent's Park,Baker Street,"78,498","27,339","15,594","7,302"
+Bakerloo,9,Baker Street,Marylebone ,"75,729","29,659","15,293","6,511"
+Bakerloo,10,Marylebone ,Edgware Road (B),"62,647","23,338","12,850","5,496"
+Bakerloo,11,Edgware Road (B),Paddington,"58,231","22,338","12,317","5,152"
+Bakerloo,12,Paddington,Warwick Avenue,"26,467","11,392","7,403","3,041"
+Bakerloo,13,Warwick Avenue,Maida Vale,"22,452","10,057","6,381","2,569"
+Bakerloo,14,Maida Vale,Kilburn Park,"19,420","8,896","5,357","2,198"
+Bakerloo,15,Kilburn Park,Queen's Park,"16,492","7,775","4,537","1,834"
+Bakerloo,16,Queen's Park,Kensal Green,"9,968","5,100","2,673","1,069"
+Bakerloo,17,Kensal Green,Willesden Junction,"8,876","4,561","2,310",910
+Bakerloo,18,Willesden Junction,Harlesden,"8,394","4,303","2,121",795
+Bakerloo,19,Harlesden,Stonebridge Park,"7,438","4,009","1,860",672
+Bakerloo,20,Stonebridge Park,Wembley Central,"6,496","3,421","1,545",543
+Bakerloo,21,Wembley Central,North Wembley,"4,047","2,304","1,100",353
+Bakerloo,22,North Wembley,South Kenton,"3,301","1,845",880,260
+Bakerloo,23,South Kenton,Kenton,"2,628","1,336",647,191
+Bakerloo,24,Kenton,Harrow & Wealdstone,"1,703",821,433,131
+Bakerloo,1,Harrow & Wealdstone,Kenton,"1,759",715,205,56
+Bakerloo,2,Kenton,South Kenton,"2,686",993,324,78
+Bakerloo,3,South Kenton,North Wembley,"3,408","1,074",313,86
+Bakerloo,4,North Wembley,Wembley Central,"4,252","1,243",361,91
+Bakerloo,5,Wembley Central,Stonebridge Park,"6,698","1,783",583,166
+Bakerloo,6,Stonebridge Park,Harlesden,"7,840","2,090",648,188
+Bakerloo,7,Harlesden,Willesden Junction,"8,836","2,675",757,216
+Bakerloo,8,Willesden Junction,Kensal Green,"9,151","2,933",790,227
+Bakerloo,9,Kensal Green,Queen's Park,"10,455","3,201",884,275
+Bakerloo,10,Queen's Park,Kilburn Park,"18,789","4,849","1,507",434
+Bakerloo,11,Kilburn Park,Maida Vale,"22,027","5,541","1,789",509
+Bakerloo,12,Maida Vale,Warwick Avenue,"25,486","6,395","2,213",628
+Bakerloo,13,Warwick Avenue,Paddington,"29,605","7,521","2,618",774
+Bakerloo,14,Paddington,Edgware Road (B),"58,693","17,023","6,522","1,787"
+Bakerloo,15,Edgware Road (B),Marylebone ,"63,190","20,051","7,376","2,022"
+Bakerloo,16,Marylebone ,Baker Street,"75,198","23,339","8,837","2,407"
+Bakerloo,17,Baker Street,Regent's Park,"76,988","22,566","8,187","2,236"
+Bakerloo,18,Regent's Park,Oxford Circus,"77,985","24,636","8,848","2,391"
+Bakerloo,19,Oxford Circus,Piccadilly Circus,"73,964","22,035","9,100","2,616"
+Bakerloo,20,Piccadilly Circus,Charing Cross ,"58,582","22,704","10,337","3,991"
+Bakerloo,21,Charing Cross ,Embankment,"50,121","19,271","9,305","3,909"
+Bakerloo,22,Embankment,Waterloo ,"39,344","16,827","8,260","3,544"
+Bakerloo,23,Waterloo ,Lambeth North,"16,940","5,801","3,230","1,455"
+Bakerloo,24,Lambeth North,Elephant & Castle ,"12,187","4,688","2,700","1,137"
+Central,1,West Ruislip,Ruislip Gardens,"2,053",384,119,33
+Central,2,Ruislip Gardens,South Ruislip,"3,271",559,170,47
+Central,3,South Ruislip,Northolt,"5,326",930,280,81
+Central,4,Northolt,Greenford,"10,796","1,719",528,132
+Central,5,Greenford,Perivale,"14,638","2,693",760,188
+Central,6,Perivale,Hanger Lane,"16,759","3,198",906,219
+Central,7,Hanger Lane,North Acton,"19,718","4,524","1,151",266
+Central,8,Ealing Broadway,West Acton,"15,975","4,088","1,259",274
+Central,9,West Acton,North Acton,"17,238","4,396","1,327",276
+Central,10,North Acton,East Acton,"40,576","10,869","2,749",630
+Central,11,East Acton,White City,"43,748","11,671","2,995",663
+Central,12,White City,Shepherd's Bush (C),"46,676","16,338","4,410","1,085"
+Central,13,Shepherd's Bush (C),Holland Park,"66,724","20,927","7,058","2,567"
+Central,14,Holland Park,Notting Hill Gate,"69,702","22,442","7,537","2,755"
+Central,15,Notting Hill Gate,Queensway,"83,422","25,749","8,991","3,239"
+Central,16,Queensway,Lancaster Gate,"94,283","27,606","9,997","3,785"
+Central,17,Lancaster Gate,Marble Arch,"100,753","29,383","10,764","4,104"
+Central,18,Marble Arch,Bond Street,"111,593","34,380","13,068","5,292"
+Central,19,Bond Street,Oxford Circus,"117,701","40,116","15,547","6,086"
+Central,20,Oxford Circus,Tottenham Court Road,"120,847","42,475","18,197","7,222"
+Central,21,Tottenham Court Road,Holborn,"127,966","47,718","22,755","10,183"
+Central,22,Holborn,Chancery Lane,"147,289","55,718","28,662","13,159"
+Central,23,Chancery Lane,St. Paul's,"145,863","60,310","30,703","14,047"
+Central,24,St. Paul's,Bank and Monument,"140,923","62,506","32,459","14,619"
+Central,25,Bank and Monument,Liverpool Street ,"140,076","64,805","33,667","15,199"
+Central,26,Liverpool Street ,Bethnal Green ,"122,203","59,258","31,712","14,622"
+Central,27,Bethnal Green ,Mile End,"113,933","56,355","30,119","13,675"
+Central,28,Mile End,Stratford,"107,600","55,360","27,746","11,841"
+Central,29,Stratford,Leyton,"69,061","43,523","22,364","9,322"
+Central,30,Leyton,Leytonstone,"58,145","38,274","20,095","7,688"
+Central,31,Leytonstone,Snaresbrook,"26,290","17,747","8,990","3,495"
+Central,32,Snaresbrook,South Woodford,"24,342","16,419","8,428","3,231"
+Central,33,South Woodford,Woodford,"19,246","13,141","6,579","2,599"
+Central,34,Woodford,Buckhurst Hill,"12,696","8,135","4,383","1,570"
+Central,35,Buckhurst Hill,Loughton,"11,114","7,060","3,730","1,375"
+Central,36,Loughton,Debden,"7,492","4,877","2,600",909
+Central,37,Debden,Theydon Bois,"5,701","3,462","2,009",722
+Central,38,Theydon Bois,Epping,"4,759","2,814","1,738",618
+Central,39,Leytonstone,Wanstead,"23,300","15,594","8,637","3,028"
+Central,40,Wanstead,Redbridge,"20,725","14,067","7,830","2,782"
+Central,41,Redbridge,Gants Hill,"17,866","12,066","7,073","2,388"
+Central,42,Gants Hill,Newbury Park,"11,748","8,003","4,480","1,625"
+Central,43,Newbury Park,Barkingside,"6,679","4,559","2,754",895
+Central,44,Barkingside,Fairlop,"5,303","3,445","2,142",709
+Central,45,Fairlop,Hainault,"3,912","2,606","1,694",586
+Central,46,Hainault,Grange Hill,523,106,95,77
+Central,47,Grange Hill,Chigwell,654,112,44,26
+Central,48,Chigwell,Roding Valley,856,213,39,12
+Central,49,Roding Valley,Woodford,"1,017",216,44,9
+Central,1,Epping,Theydon Bois,"5,162",739,169,53
+Central,2,Theydon Bois,Debden,"6,165",869,208,76
+Central,3,Debden,Loughton,"8,149","1,548",375,115
+Central,4,Loughton,Buckhurst Hill,"11,548","2,168",527,165
+Central,5,Buckhurst Hill,Woodford,"13,282","2,421",607,187
+Central,6,Woodford,South Woodford,"20,447","3,273",834,234
+Central,7,South Woodford,Snaresbrook,"24,785","4,016","1,088",295
+Central,8,Snaresbrook,Leytonstone,"26,830","4,505","1,181",334
+Central,9,Woodford,Roding Valley,771,"1,271",342,211
+Central,10,Roding Valley,Chigwell,620,841,249,143
+Central,11,Chigwell,Grange Hill,437,527,165,77
+Central,12,Grange Hill,Hainault,379,130,37,15
+Central,13,Hainault,Fairlop,"3,858",565,157,49
+Central,14,Fairlop,Barkingside,"5,309",794,226,70
+Central,15,Barkingside,Newbury Park,"6,653","1,079",305,83
+Central,16,Newbury Park,Gants Hill,"12,252","1,799",566,149
+Central,17,Gants Hill,Redbridge,"18,718","2,818",953,250
+Central,18,Redbridge,Wanstead,"21,901","3,329","1,115",286
+Central,19,Wanstead,Leytonstone,"24,568","3,708","1,302",333
+Central,20,Leytonstone,Leyton,"60,219","9,607","2,914",816
+Central,21,Leyton,Stratford,"72,417","11,322","3,705","1,042"
+Central,22,Stratford,Mile End,"103,311","19,822","7,478","2,045"
+Central,23,Mile End,Bethnal Green ,"113,252","22,083","8,111","2,294"
+Central,24,Bethnal Green ,Liverpool Street ,"122,442","23,833","8,858","2,705"
+Central,25,Liverpool Street ,Bank and Monument,"137,877","33,797","12,932","3,938"
+Central,26,Bank and Monument,St. Paul's,"140,901","38,839","14,442","4,294"
+Central,27,St. Paul's,Chancery Lane,"145,711","44,947","16,966","4,981"
+Central,28,Chancery Lane,Holborn,"146,495","50,597","19,806","5,613"
+Central,29,Holborn,Tottenham Court Road,"127,231","47,528","20,187","6,224"
+Central,30,Tottenham Court Road,Oxford Circus,"125,523","45,932","22,074","8,384"
+Central,31,Oxford Circus,Bond Street,"116,579","38,077","20,257","8,314"
+Central,32,Bond Street,Marble Arch,"110,229","36,240","19,373","8,338"
+Central,33,Marble Arch,Lancaster Gate,"100,439","34,774","19,255","8,219"
+Central,34,Lancaster Gate,Queensway,"94,182","31,988","18,121","7,706"
+Central,35,Queensway,Notting Hill Gate,"83,337","29,390","16,442","6,930"
+Central,36,Notting Hill Gate,Holland Park,"66,732","27,489","14,680","6,208"
+Central,37,Holland Park,Shepherd's Bush (C),"63,498","26,433","14,219","5,982"
+Central,38,Shepherd's Bush (C),White City,"44,073","20,945","11,377","5,012"
+Central,39,White City,East Acton,"40,712","20,127","11,453","4,890"
+Central,40,East Acton,North Acton,"37,756","18,720","10,788","4,467"
+Central,41,North Acton,Hanger Lane,"17,860","10,728","5,705","2,245"
+Central,42,Hanger Lane,Perivale,"15,124","9,271","5,122","1,959"
+Central,43,Perivale,Greenford,"13,152","8,034","4,414","1,756"
+Central,44,Greenford,Northolt,"9,481","5,709","3,256","1,257"
+Central,45,Northolt,South Ruislip,"4,669","2,472","1,539",588
+Central,46,South Ruislip,Ruislip Gardens,"2,727","1,394",901,389
+Central,47,Ruislip Gardens,West Ruislip,"1,689",700,502,226
+Central,48,North Acton,West Acton,"16,154","7,041","4,069","1,676"
+Central,49,West Acton,Ealing Broadway,"14,926","6,289","3,748","1,446"
+District,1,Ealing Broadway,Ealing Common,"10,310","2,051",666,137
+District,2,Ealing Common,Acton Town,"11,484","2,145",711,161
+District,3,Acton Town,Chiswick Park,"10,741","2,108",737,199
+District,4,Chiswick Park,Turnham Green,"10,686","2,497",714,177
+District,5,Richmond,Kew Gardens,"16,191","2,497",715,174
+District,6,Kew Gardens,Gunnersbury,"19,491","3,185",896,211
+District,7,Gunnersbury,Turnham Green,"21,619","5,656","1,398",321
+District,8,Turnham Green,Stamford Brook,"33,242","8,756","2,464",560
+District,9,Stamford Brook,Ravenscourt Park,"34,816","9,431","2,598",621
+District,10,Ravenscourt Park,Hammersmith,"36,459","10,447","2,959",698
+District,11,Hammersmith,Barons Court,"35,389","12,635","3,821","1,323"
+District,12,Barons Court,West Kensington,"33,934","12,462","3,985","1,502"
+District,13,West Kensington,Earl's Court,"36,984","13,338","4,267","1,564"
+District,14,Wimbledon,Wimbledon Park,"19,165","5,589","1,725",477
+District,15,Wimbledon Park,Southfields,"19,478","5,706","1,681",441
+District,16,Southfields,East Putney,"22,931","6,074","1,749",446
+District,17,East Putney,Putney Bridge,"27,504","7,339","2,051",492
+District,18,Putney Bridge,Parsons Green,"31,541","9,244","2,618",683
+District,19,Parsons Green,Fulham Broadway,"35,840","11,107","3,187",840
+District,20,Fulham Broadway,West Brompton,"42,127","14,247","4,166","1,250"
+District,21,West Brompton,Earl's Court,"43,922","15,393","4,477","1,355"
+District,22,Kensington (Olympia),Earl's Court,982,0,96,0
+District,23,Earl's Court,High Street Kensington,"19,223","4,780","1,748",550
+District,24,High Street Kensington,Notting Hill Gate,"16,499","5,146","1,946",626
+District,25,Notting Hill Gate,Bayswater,"10,548","3,514","1,352",453
+District,26,Bayswater,Paddington,"9,148","3,238","1,176",379
+District,27,Paddington,Edgware Road (C),"2,624","1,259",364,132
+District,28,Earl's Court,Gloucester Road,"58,858","21,259","6,778","2,457"
+District,29,Gloucester Road,South Kensington,"61,948","22,936","7,576","2,733"
+District,30,South Kensington,Sloane Square,"75,092","28,399","10,306","4,028"
+District,31,Sloane Square,Victoria ,"79,758","32,048","12,046","4,722"
+District,32,Victoria ,St. James's Park,"67,276","25,909","8,940","3,662"
+District,33,St. James's Park,Westminster,"67,805","31,332","10,011","3,973"
+District,34,Westminster,Embankment,"55,092","28,501","8,463","3,094"
+District,35,Embankment,Temple,"62,763","28,565","10,214","4,234"
+District,36,Temple,Blackfriars ,"62,490","30,251","10,885","4,723"
+District,37,Blackfriars ,Mansion House,"60,297","30,005","11,170","4,681"
+District,38,Mansion House,Cannon Street ,"59,191","30,365","11,610","4,705"
+District,39,Cannon Street ,Bank and Monument,"58,575","29,383","11,499","4,844"
+District,40,Bank and Monument,Tower Hill,"57,107","28,587","11,574","4,924"
+District,41,Tower Hill,Aldgate East,"43,420","23,494","10,760","4,468"
+District,42,Aldgate East,Whitechapel,"35,143","22,742","10,761","4,227"
+District,43,Whitechapel,Stepney Green,"34,979","25,014","11,449","4,159"
+District,44,Stepney Green,Mile End,"34,559","24,747","11,189","4,108"
+District,45,Mile End,Bow Road,"33,934","23,334","12,080","4,699"
+District,46,Bow Road,Bromley-by-Bow,"31,330","22,117","11,319","4,203"
+District,47,Bromley-by-Bow,West Ham,"29,992","21,389","10,899","3,994"
+District,48,West Ham,Plaistow,"34,913","24,572","12,950","4,914"
+District,49,Plaistow,Upton Park,"32,941","22,734","11,999","4,589"
+District,50,Upton Park,East Ham,"28,013","19,316","10,424","3,760"
+District,51,East Ham,Barking,"22,153","14,596","7,764","2,702"
+District,52,Barking,Upney,"18,374","12,902","7,181","2,115"
+District,53,Upney,Becontree,"16,476","11,605","6,222","1,935"
+District,54,Becontree,Dagenham Heathway,"13,777","9,462","5,259","1,573"
+District,55,Dagenham Heathway,Dagenham East,"8,521","5,959","3,480","1,053"
+District,56,Dagenham East,Elm Park,"6,330","4,240","2,575",728
+District,57,Elm Park,Hornchurch,"3,828","2,043","1,376",398
+District,58,Hornchurch,Upminster Bridge,"2,388",890,679,199
+District,59,Upminster Bridge,Upminster,"1,983",575,418,119
+District,1,Upminster,Upminster Bridge,"1,617","1,031",250,53
+District,2,Upminster Bridge,Hornchurch,"2,061","1,139",232,58
+District,3,Hornchurch,Elm Park,"3,433","1,183",268,80
+District,4,Elm Park,Dagenham East,"6,060","1,369",331,101
+District,5,Dagenham East,Dagenham Heathway,"8,658","1,938",502,155
+District,6,Dagenham Heathway,Becontree,"14,124","2,973",831,228
+District,7,Becontree,Upney,"17,124","3,319",961,267
+District,8,Upney,Barking,"19,355","3,746","1,098",287
+District,9,Barking,East Ham,"21,385","4,698","1,517",398
+District,10,East Ham,Upton Park,"27,418","5,849","1,862",490
+District,11,Upton Park,Plaistow,"32,403","6,791","2,114",535
+District,12,Plaistow,West Ham,"34,576","7,130","2,272",555
+District,13,West Ham,Bromley-by-Bow,"28,218","6,176","1,984",589
+District,14,Bromley-by-Bow,Bow Road,"29,939","6,653","2,117",585
+District,15,Bow Road,Mile End,"33,016","7,242","2,329",661
+District,16,Mile End,Stepney Green,"32,072","6,671","2,459",752
+District,17,Stepney Green,Whitechapel,"33,027","7,171","2,558",714
+District,18,Whitechapel,Aldgate East,"32,783","7,745","2,526",789
+District,19,Aldgate East,Tower Hill,"42,086","11,787","4,218","1,245"
+District,20,Tower Hill,Bank and Monument,"54,137","16,430","5,495","1,750"
+District,21,Bank and Monument,Cannon Street ,"54,387","18,689","6,752","2,040"
+District,22,Cannon Street ,Mansion House,"55,536","20,625","7,555","2,321"
+District,23,Mansion House,Blackfriars ,"56,511","24,326","9,112","2,603"
+District,24,Blackfriars ,Temple,"59,746","27,298","10,552","2,949"
+District,25,Temple,Embankment,"59,596","29,597","12,054","3,495"
+District,26,Embankment,Westminster,"57,054","26,381","12,679","4,556"
+District,27,Westminster,St. James's Park,"62,621","28,354","14,078","5,277"
+District,28,St. James's Park,Victoria ,"61,984","31,034","14,728","5,526"
+District,29,Victoria ,Sloane Square,"82,228","31,545","16,511","6,287"
+District,30,Sloane Square,South Kensington,"77,636","29,622","16,411","6,211"
+District,31,South Kensington,Gloucester Road,"63,651","28,605","16,302","6,593"
+District,32,Gloucester Road,Earl's Court,"61,426","27,612","16,302","6,463"
+District,33,Edgware Road (C),Paddington,"5,630","2,104","1,199",484
+District,34,Paddington,Bayswater,"11,723","4,463","2,190",745
+District,35,Bayswater,Notting Hill Gate,"13,070","4,759","2,302",767
+District,36,Notting Hill Gate,High Street Kensington,"18,427","6,868","3,707","1,277"
+District,37,High Street Kensington,Earl's Court,"20,168","7,652","4,163","1,390"
+District,38,Earl's Court,Kensington (Olympia),668,0,16,0
+District,39,Earl's Court,West Brompton,"45,213","21,648","13,116","5,272"
+District,40,West Brompton,Fulham Broadway,"42,628","20,424","12,473","4,964"
+District,41,Fulham Broadway,Parsons Green,"36,575","17,968","10,965","4,618"
+District,42,Parsons Green,Putney Bridge,"32,672","15,692","9,197","3,985"
+District,43,Putney Bridge,East Putney,"28,392","13,587","7,961","3,240"
+District,44,East Putney,Southfields,"24,037","10,945","5,858","2,447"
+District,45,Southfields,Wimbledon Park,"21,254","8,410","4,216","1,643"
+District,46,Wimbledon Park,Wimbledon,"20,846","7,784","3,789","1,465"
+District,47,Earl's Court,West Kensington,"40,382","16,078","9,701","3,802"
+District,48,West Kensington,Barons Court,"38,092","14,950","8,746","3,273"
+District,49,Barons Court,Hammersmith ,"38,690","14,740","8,651","3,453"
+District,50,Hammersmith ,Ravenscourt Park,"38,662","13,853","9,321","3,750"
+District,51,Ravenscourt Park,Stamford Brook,"37,288","13,428","8,846","3,471"
+District,52,Stamford Brook,Turnham Green,"36,150","12,640","8,069","3,303"
+District,53,Turnham Green,Gunnersbury,"24,973","6,131","4,447","2,081"
+District,54,Gunnersbury,Kew Gardens,"23,468","5,857","3,888","1,777"
+District,55,Kew Gardens,Richmond,"20,654","4,825","3,147","1,435"
+District,56,Turnham Green,Chiswick Park,"11,658","4,696","2,444","1,008"
+District,57,Chiswick Park,Acton Town,"11,890","4,583","2,125",837
+District,58,Acton Town,Ealing Common,"12,649","3,749","1,880",801
+District,59,Ealing Common,Ealing Broadway,"11,493","3,281","1,574",603
+Docklands Light Railway,1,Woolwich Arsenal,King George V,"15,577","5,164","1,784",514
+Docklands Light Railway,2,King George V,London City Airport,"16,801","5,494","1,883",549
+Docklands Light Railway,3,London City Airport,Pontoon Dock,"18,663","6,797","2,981",613
+Docklands Light Railway,4,Pontoon Dock,West Silvertown,"21,939","7,591","3,153",677
+Docklands Light Railway,5,West Silvertown,Canning Town,"23,706","8,185","3,334",734
+Docklands Light Railway,6,Beckton,Gallions Reach,"2,585",605,276,67
+Docklands Light Railway,7,Gallions Reach,Cyprus,"4,003","1,109",436,126
+Docklands Light Railway,8,Cyprus,Beckton Park,"5,231","2,267",797,214
+Docklands Light Railway,9,Beckton Park,Royal Albert,"5,743","2,344",827,224
+Docklands Light Railway,10,Royal Albert,Prince Regent,"7,886","3,066",982,281
+Docklands Light Railway,11,Prince Regent,Custom House,"11,062","3,817","1,264",354
+Docklands Light Railway,12,Custom House,Royal Victoria,"13,829","4,583","1,595",431
+Docklands Light Railway,13,Royal Victoria,Canning Town,"18,854","5,475","1,986",593
+Docklands Light Railway,14,Canning Town,Star Lane,"10,229","3,724","1,521",548
+Docklands Light Railway,15,Star Lane,West Ham,"10,889","4,057","1,640",554
+Docklands Light Railway,16,West Ham,Abbey Road,"10,484","3,328","1,415",469
+Docklands Light Railway,17,Abbey Road,Stratford High Street,"10,784","3,364","1,424",443
+Docklands Light Railway,18,Stratford High Street,Stratford,"10,141","3,245","1,329",410
+Docklands Light Railway,19,Stratford,Stratford International ,"4,643","1,697",869,402
+Docklands Light Railway,20,Canning Town,East India,"16,389","6,051","2,135",707
+Docklands Light Railway,21,East India,Blackwall,"17,038","6,467","2,072",654
+Docklands Light Railway,22,Blackwall,Poplar,"17,483","6,786","2,126",635
+Docklands Light Railway,23,Poplar,Westferry,"16,022","6,395","1,896",577
+Docklands Light Railway,24,Lewisham ,Elverson Road,"10,904","2,228",834,330
+Docklands Light Railway,25,Elverson Road,Deptford Bridge,"12,640","2,436",955,373
+Docklands Light Railway,26,Deptford Bridge,Greenwich,"15,928","2,957","1,257",527
+Docklands Light Railway,27,Greenwich,Cutty Sark,"18,175","3,879","1,699",640
+Docklands Light Railway,28,Cutty Sark,Island Gardens,"24,395","5,506","2,415","1,000"
+Docklands Light Railway,29,Island Gardens,Mudchute,"26,404","5,822","2,493","1,000"
+Docklands Light Railway,30,Mudchute,Crossharbour,"27,996","6,054","2,581","1,002"
+Docklands Light Railway,31,Crossharbour,South Quay,"31,044","6,906","2,893","1,156"
+Docklands Light Railway,32,South Quay,Heron Quays,"33,658","9,704","3,460","1,303"
+Docklands Light Railway,33,Heron Quays,Canary Wharf ,"29,331","10,777","3,758","1,308"
+Docklands Light Railway,34,Canary Wharf ,West India Quay,"31,620","16,253","5,775","1,898"
+Docklands Light Railway,35,West India Quay,Westferry,"21,384","11,053","4,422","1,424"
+Docklands Light Railway,36,Westferry,Limehouse ,"35,626","15,414","5,562","1,651"
+Docklands Light Railway,37,Limehouse ,Shadwell ,"35,070","13,094","4,860","1,503"
+Docklands Light Railway,38,Shadwell ,Tower Gateway,"4,682","1,279",401,103
+Docklands Light Railway,39,Shadwell ,Bank and Monument,"28,303","10,010","3,854","1,232"
+Docklands Light Railway,40,West India Quay,Poplar,"10,810","5,358","1,871",626
+Docklands Light Railway,41,Poplar,All Saints,"11,391","5,804","2,128",691
+Docklands Light Railway,42,All Saints,Langdon Park,"11,404","5,774","2,116",655
+Docklands Light Railway,43,Langdon Park,Devons Road,"10,947","5,887","2,382",800
+Docklands Light Railway,44,Devons Road,Bow Church,"10,941","5,695","2,229",697
+Docklands Light Railway,45,Bow Church,Pudding Mill Lane,"10,165","5,287","2,038",664
+Docklands Light Railway,46,Pudding Mill Lane,Stratford,"10,193","5,360","2,049",646
+Docklands Light Railway,1,Stratford,Pudding Mill Lane,"10,526","3,692","1,363",475
+Docklands Light Railway,2,Pudding Mill Lane,Bow Church,"10,573","3,649","1,304",441
+Docklands Light Railway,3,Bow Church,Devons Road,"12,560","4,391","1,545",627
+Docklands Light Railway,4,Devons Road,Langdon Park,"12,920","4,271","1,366",544
+Docklands Light Railway,5,Langdon Park,All Saints,"13,524","4,254","1,621",589
+Docklands Light Railway,6,All Saints,Poplar,"13,685","4,087","1,562",524
+Docklands Light Railway,7,Bank and Monument,Shadwell ,"29,572","19,579","7,888","3,023"
+Docklands Light Railway,8,Tower Gateway,Shadwell ,"3,693","2,829","1,017",373
+Docklands Light Railway,9,Shadwell ,Limehouse ,"35,601","23,748","9,713","3,602"
+Docklands Light Railway,10,Limehouse ,Westferry,"33,243","21,571","8,944","3,315"
+Docklands Light Railway,11,Westferry,Canary Wharf ,"20,448","11,641","4,535","1,575"
+Docklands Light Railway,12,Poplar,West India Quay,"13,546","3,502","1,326",371
+Docklands Light Railway,13,West India Quay,Canary Wharf ,"12,798","3,325","1,083",384
+Docklands Light Railway,14,Canary Wharf ,Heron Quays,"26,064","12,097","5,458","2,034"
+Docklands Light Railway,15,Heron Quays,South Quay,"29,683","13,575","6,259","2,566"
+Docklands Light Railway,16,South Quay,Crossharbour,"27,258","13,034","5,747","2,335"
+Docklands Light Railway,17,Crossharbour,Mudchute,"24,525","12,066","5,092","2,148"
+Docklands Light Railway,18,Mudchute,Island Gardens,"23,333","11,338","4,673","1,929"
+Docklands Light Railway,19,Island Gardens,Cutty Sark,"21,967","10,557","4,344","1,692"
+Docklands Light Railway,20,Cutty Sark,Greenwich,"16,288","8,918","3,492","1,309"
+Docklands Light Railway,21,Greenwich,Deptford Bridge,"15,577","8,884","3,417","1,293"
+Docklands Light Railway,22,Deptford Bridge,Elverson Road,"12,671","7,594","2,785",891
+Docklands Light Railway,23,Elverson Road,Lewisham ,"11,152","6,961","2,381",682
+Docklands Light Railway,24,Westferry,Poplar,"15,082","11,361","5,067","1,961"
+Docklands Light Railway,25,Poplar,Blackwall,"15,995","10,377","5,110","1,880"
+Docklands Light Railway,26,Blackwall,East India,"15,762","10,006","4,971","1,787"
+Docklands Light Railway,27,East India,Canning Town,"15,915","10,255","4,922","1,706"
+Docklands Light Railway,28,Stratford International ,Stratford,"4,878","1,724",692,248
+Docklands Light Railway,29,Stratford,Stratford High Street,"8,266","4,037","2,012",686
+Docklands Light Railway,30,Stratford High Street,Abbey Road,"8,717","4,242","2,080",722
+Docklands Light Railway,31,Abbey Road,West Ham,"8,429","3,958","2,012",673
+Docklands Light Railway,32,West Ham,Star Lane,"8,676","4,265","2,176",732
+Docklands Light Railway,33,Star Lane,Canning Town,"7,810","4,081","2,035",722
+Docklands Light Railway,34,Canning Town,Royal Victoria,"18,513","7,218","3,672","1,763"
+Docklands Light Railway,35,Royal Victoria,Custom House,"13,568","5,669","2,766","1,278"
+Docklands Light Railway,36,Custom House,Prince Regent,"11,073","4,921","2,317","1,080"
+Docklands Light Railway,37,Prince Regent,Royal Albert,"7,988","3,840","1,810",799
+Docklands Light Railway,38,Royal Albert,Beckton Park,"5,643","3,010","1,468",601
+Docklands Light Railway,39,Beckton Park,Cyprus,"5,143","2,690","1,323",575
+Docklands Light Railway,40,Cyprus,Gallions Reach,"4,214","2,088","1,132",457
+Docklands Light Railway,41,Gallions Reach,Beckton,"2,674","1,499",723,275
+Docklands Light Railway,42,Canning Town,West Silvertown,"21,436","11,286","6,337","2,583"
+Docklands Light Railway,43,West Silvertown,Pontoon Dock,"19,526","10,502","6,044","2,420"
+Docklands Light Railway,44,Pontoon Dock,London City Airport,"16,555","9,295","5,025","2,085"
+Docklands Light Railway,45,London City Airport,King George V,"14,919","7,196","4,757","1,988"
+Docklands Light Railway,46,King George V,Woolwich Arsenal,"13,865","6,579","4,424","1,907"
+Hammersmith & City,1,Barking,East Ham,"3,634",782,262,70
+Hammersmith & City,2,East Ham,Upton Park,"6,874","1,216",471,118
+Hammersmith & City,3,Upton Park,Plaistow,"9,419","1,592",616,165
+Hammersmith & City,4,Plaistow,West Ham,"10,638","1,835",686,188
+Hammersmith & City,5,West Ham,Bromley-by-Bow,"9,362","1,740",678,236
+Hammersmith & City,6,Bromley-by-Bow,Bow Road,"10,144","2,018",714,254
+Hammersmith & City,7,Bow Road,Mile End,"11,510","2,271",818,276
+Hammersmith & City,8,Mile End,Stepney Green,"10,484","2,375",903,266
+Hammersmith & City,9,Stepney Green,Whitechapel,"11,072","2,720",971,288
+Hammersmith & City,10,Whitechapel,Aldgate East,"12,110","3,381","1,292",387
+Hammersmith & City,11,Aldgate East,Liverpool Street ,"17,690","5,136","2,006",710
+Circle,12,Liverpool Street ,Moorgate,"33,685","11,819","5,056","2,047"
+Circle,13,Moorgate,Barbican,"32,044","13,213","5,548","2,057"
+Circle,14,Barbican,Farringdon,"32,127","14,693","6,057","2,287"
+Circle,15,Farringdon,King's Cross St. Pancras,"32,321","18,352","7,125","2,821"
+Circle,16,King's Cross St. Pancras,Euston Square,"34,846","16,455","7,023","2,877"
+Circle,17,Euston Square,Great Portland Street,"34,402","16,065","7,665","2,966"
+Circle,18,Great Portland Street,Baker Street,"34,176","16,947","7,996","3,056"
+Circle,19,Baker Street,Edgware Road (C),"36,377","17,502","8,111","3,099"
+Circle,20,Edgware Road (C),Paddington,"28,586","15,379","6,739","2,374"
+Hammersmith & City,21,Paddington,Royal Oak,"23,171","9,972","5,194","2,030"
+Hammersmith & City,22,Royal Oak,Westbourne Park,"22,577","9,496","4,739","1,859"
+Hammersmith & City,23,Westbourne Park,Ladbroke Grove,"21,652","8,797","4,110","1,561"
+Hammersmith & City,24,Ladbroke Grove,Latimer Road,"17,361","7,863","3,573","1,338"
+Hammersmith & City,25,Latimer Road,Wood Lane,"17,075","7,609","3,371","1,242"
+Hammersmith & City,26,Wood Lane,Shepherd's Bush Market,"15,234","6,591","3,230","1,173"
+Hammersmith & City,27,Shepherd's Bush Market,Goldhawk Road,"13,944","5,574","2,676",984
+Hammersmith & City,28,Goldhawk Road,Hammersmith,"12,958","4,894","2,199",801
+Circle,29,Edgware Road (C),Paddington,"4,389","1,068",709,251
+Circle,30,Paddington,Bayswater,"11,209","3,246","1,367",388
+Circle,31,Bayswater,Notting Hill Gate,"13,020","3,501","1,422",377
+Circle,32,Notting Hill Gate,High Street Kensington,"17,461","4,505","1,924",579
+Circle,33,High Street Kensington,Gloucester Road,"20,969","7,302","2,982",819
+Circle,34,Gloucester Road,South Kensington,"22,178","7,292","2,980",891
+Circle,35,South Kensington,Sloane Square,"24,836","8,561","3,701","1,274"
+Circle,36,Sloane Square,Victoria ,"26,444","9,357","4,228","1,415"
+Circle,37,Victoria ,St. James's Park,"21,998","7,200","2,651","1,013"
+Circle,38,St. James's Park,Westminster,"21,941","8,773","3,031","1,045"
+Circle,39,Westminster,Embankment,"17,853","8,117","2,343",808
+Circle,40,Embankment,Temple,"18,483","8,178","2,560",958
+Circle,41,Temple,Blackfriars ,"18,329","8,561","2,751","1,030"
+Circle,42,Blackfriars ,Mansion House,"17,474","8,496","2,689","1,006"
+Circle,43,Mansion House,Cannon Street ,"17,189","8,570","2,716","1,005"
+Circle,44,Cannon Street ,Bank,"16,791","8,222","2,740",956
+Circle,45,Bank,Tower Hill,"15,603","7,845","2,557",920
+Circle,46,Tower Hill,Aldgate,"13,409","7,502","2,338",903
+Circle,47,Aldgate,Liverpool Street ,"12,624","8,095","2,613",906
+Circle,1,Liverpool Street ,Aldgate,"13,223","5,606","1,701",557
+Circle,2,Aldgate,Tower Hill,"12,107","5,735","1,689",482
+Circle,3,Tower Hill,Bank,"14,089","5,491","1,818",554
+Circle,4,Bank,Cannon Street ,"14,869","5,885","1,967",599
+Circle,5,Cannon Street ,Mansion House,"15,394","6,243","2,113",623
+Circle,6,Mansion House,Blackfriars ,"15,661","7,035","2,359",675
+Circle,7,Blackfriars ,Temple,"16,500","7,474","2,709",768
+Circle,8,Temple,Embankment,"16,529","8,043","2,987",883
+Circle,9,Embankment,Westminster,"17,416","7,028","3,200","1,112"
+Circle,10,Westminster,St. James's Park,"18,889","7,639","3,329","1,267"
+Circle,11,St. James's Park,Victoria ,"18,933","8,531","3,447","1,268"
+Circle,12,Victoria ,Sloane Square,"22,052","8,037","3,325","1,177"
+Circle,13,Sloane Square,South Kensington,"20,658","7,717","3,011","1,152"
+Circle,14,South Kensington,Gloucester Road,"16,578","8,042","3,336","1,245"
+Circle,15,Gloucester Road,High Street Kensington,"16,286","8,231","3,110","1,212"
+Circle,16,High Street Kensington,Notting Hill Gate,"13,626","7,609","2,730","1,076"
+Circle,17,Notting Hill Gate,Bayswater,"9,183","5,725","1,913",832
+Circle,18,Bayswater,Paddington,"7,673","5,046","1,495",594
+Circle,19,Paddington,Edgware Road,"2,148","1,645",324,227
+Hammersmith & City,20,Hammersmith,Goldhawk Road,"13,987","4,841","1,706",623
+Hammersmith & City,21,Goldhawk Road,Shepherd's Bush Market,"15,287","5,117","1,785",645
+Hammersmith & City,22,Shepherd's Bush Market,Wood Lane,"17,141","5,390","1,957",770
+Hammersmith & City,23,Wood Lane,Latimer Road,"18,263","6,072","2,268",926
+Hammersmith & City,24,Latimer Road,Ladbroke Grove,"18,683","6,680","2,563","1,000"
+Hammersmith & City,25,Ladbroke Grove,Westbourne Park,"23,445","7,784","2,788","1,050"
+Hammersmith & City,26,Westbourne Park,Royal Oak,"24,836","8,462","2,836","1,137"
+Hammersmith & City,27,Royal Oak,Paddington,"25,612","8,831","3,108","1,193"
+Circle,28,Paddington,Edgware Road (C),"31,545","11,402","4,005","1,381"
+Circle,29,Edgware Road (C),Baker Street,"34,097","14,881","5,011","1,770"
+Circle,30,Baker Street,Great Portland Street,"29,791","13,749","4,940","1,889"
+Circle,31,Great Portland Street,Euston Square,"30,029","14,967","5,489","2,013"
+Circle,32,Euston Square,King's Cross St. Pancras,"29,842","15,757","6,261","2,153"
+Circle,33,King's Cross St. Pancras,Farringdon,"32,609","13,498","6,301","2,335"
+Circle,34,Farringdon,Barbican,"31,541","15,729","7,075","2,690"
+Circle,35,Barbican,Moorgate,"31,032","16,972","7,814","2,870"
+Circle,36,Moorgate,Liverpool Street ,"33,268","18,232","8,389","3,148"
+Circle,37,Liverpool Street ,Aldgate East,"16,745","9,348","5,320","2,256"
+Circle,38,Aldgate East,Whitechapel,"11,852","8,773","4,412","1,988"
+Circle,39,Whitechapel,Stepney Green,"11,037","9,007","4,255","1,984"
+Circle,40,Stepney Green,Mile End,"10,603","8,513","4,204","1,866"
+Circle,41,Mile End,Bow Road,"10,334","7,968","4,607","1,909"
+Circle,42,Bow Road,Bromley-by-Bow,"9,151","7,459","4,088","1,661"
+Circle,43,Bromley-by-Bow,West Ham,"8,436","7,099","3,741","1,511"
+Circle,44,West Ham,Plaistow,"9,098","7,197","3,814","1,401"
+Circle,45,Plaistow,Upton Park,"8,088","6,273","3,392","1,185"
+Circle,46,Upton Park,East Ham,"5,980","4,637","2,601",880
+Circle,47,East Ham,Barking,"3,411","2,277","1,301",516
+Jubilee,1,Stratford,West Ham,"38,038","11,482","5,526","1,561"
+Jubilee,2,West Ham,Canning Town,"49,896","12,474","5,629","1,688"
+Jubilee,3,Canning Town,North Greenwich,"74,257","15,016","6,950","2,108"
+Jubilee,4,North Greenwich,Canary Wharf ,"91,137","17,385","8,614","8,410"
+Jubilee,5,Canary Wharf ,Canada Water,"109,584","45,524","19,159","10,176"
+Jubilee,6,Canada Water,Bermondsey,"131,811","46,788","19,240","10,184"
+Jubilee,7,Bermondsey,London Bridge ,"136,513","47,421","19,610","10,173"
+Jubilee,8,London Bridge ,Southwark,"149,164","47,267","19,833","9,390"
+Jubilee,9,Southwark,Waterloo ,"153,389","50,232","21,035","9,916"
+Jubilee,10,Waterloo ,Westminster,"126,844","38,767","16,796","7,692"
+Jubilee,11,Westminster,Green Park,"122,003","41,735","17,323","7,624"
+Jubilee,12,Green Park,Bond Street,"97,085","38,356","16,696","7,401"
+Jubilee,13,Bond Street,Baker Street,"82,182","38,051","19,410","8,445"
+Jubilee,14,Baker Street,St. John's Wood,"65,881","31,793","17,827","8,007"
+Jubilee,15,St. John's Wood,Swiss Cottage,"60,330","29,911","16,869","7,728"
+Jubilee,16,Swiss Cottage,Finchley Road,"55,503","27,764","15,964","7,135"
+Jubilee,17,Finchley Road,West Hampstead ,"46,099","21,540","12,325","5,876"
+Jubilee,18,West Hampstead ,Kilburn,"39,137","18,191","10,217","4,927"
+Jubilee,19,Kilburn,Willesden Green,"32,500","15,520","8,610","3,941"
+Jubilee,20,Willesden Green,Dollis Hill,"25,699","11,902","6,420","2,650"
+Jubilee,21,Dollis Hill,Neasden,"23,097","10,637","5,616","2,201"
+Jubilee,22,Neasden,Wembley Park,"20,732","9,345","4,971","1,859"
+Jubilee,23,Wembley Park,Kingsbury,"15,755","9,938","5,334","1,655"
+Jubilee,24,Kingsbury,Queensbury,"11,780","7,021","4,206","1,299"
+Jubilee,25,Queensbury,Canons Park,"7,814","3,986","2,564",920
+Jubilee,26,Canons Park,Stanmore,"4,775","2,106","1,424",568
+Jubilee,1,Stanmore,Canons Park,"4,809","1,114",266,62
+Jubilee,2,Canons Park,Queensbury,"8,003","1,786",471,116
+Jubilee,3,Queensbury,Kingsbury,"12,158","2,320",692,176
+Jubilee,4,Kingsbury,Wembley Park,"16,199","3,110",907,233
+Jubilee,5,Wembley Park,Neasden,"20,999","4,979","1,409",500
+Jubilee,6,Neasden,Dollis Hill,"23,671","5,277","1,511",530
+Jubilee,7,Dollis Hill,Willesden Green,"26,913","5,710","1,647",579
+Jubilee,8,Willesden Green,Kilburn,"34,727","6,598","2,049",701
+Jubilee,9,Kilburn,West Hampstead ,"41,932","8,018","2,647",897
+Jubilee,10,West Hampstead ,Finchley Road,"50,206","9,801","3,279","1,141"
+Jubilee,11,Finchley Road,Swiss Cottage,"67,921","13,669","4,486","1,566"
+Jubilee,12,Swiss Cottage,St. John's Wood,"73,028","15,350","5,246","1,834"
+Jubilee,13,St. John's Wood,Baker Street,"78,197","17,615","6,110","2,128"
+Jubilee,14,Baker Street,Bond Street,"87,246","22,950","8,926","3,067"
+Jubilee,15,Bond Street,Green Park,"100,941","32,473","14,964","5,528"
+Jubilee,16,Green Park,Westminster,"3,411","39,085","18,641","8,027"
+Jubilee,17,Westminster,Waterloo ,"38,038","48,056","23,060","9,889"
+Jubilee,18,Waterloo ,Southwark,"49,896","53,502","26,823","11,988"
+Jubilee,19,Southwark,London Bridge ,"74,257","54,470","27,492","12,427"
+Jubilee,20,London Bridge ,Bermondsey,"91,137","52,239","27,772","12,360"
+Jubilee,21,Bermondsey,Canada Water,"109,584","50,744","27,002","11,968"
+Jubilee,22,Canada Water,Canary Wharf ,"131,811","42,340","20,984","9,289"
+Jubilee,23,Canary Wharf ,North Greenwich,"136,513","40,820","20,713","8,328"
+Jubilee,24,North Greenwich,Canning Town,"149,164","30,420","15,089","8,293"
+Jubilee,25,Canning Town,West Ham,"153,389","23,298","10,030","4,800"
+Jubilee,26,West Ham,Stratford,"126,844","16,265","6,605","3,113"
+East London,1,Battersea Park,Wandsworth Road,"122,003",0,0,47
+East London,2,Clapham Junction,Wandsworth Road,"97,085","3,088","1,821",422
+East London,3,Wandsworth Road,Clapham High Street,"82,182","3,259","1,856",481
+East London,4,Clapham High Street,Denmark Hill,"65,881","3,308","1,746",491
+East London,5,Denmark Hill,Peckham Rye,"60,330","3,702","1,663",447
+East London,6,Peckham Rye,Queens Road Peckham,"55,503","3,650","1,632",545
+East London,7,Queens Road Peckham,Surrey Quays,"46,099","3,992","1,584",545
+East London,8,Crystal Palace,Sydenham,"39,137",584,201,60
+East London,9,West Croydon NR,Norwood Junction,"32,500","2,344",762,175
+East London,10,Norwood Junction,Anerley,"25,699","2,541",840,197
+East London,11,Anerley,Penge West,"23,097","2,572",838,190
+East London,12,Penge West,Sydenham,"20,732","2,660",895,213
+East London,13,Sydenham,Forest Hill,"15,755","3,681","1,222",288
+East London,14,Forest Hill,Honor Oak Park,"11,780","4,165","1,506",362
+East London,15,Honor Oak Park,Brockley,"7,814","4,436","1,587",378
+East London,16,Brockley,New Cross Gate,"4,775","4,999","1,743",418
+East London,17,New Cross Gate,Surrey Quays,"4,809","6,100","2,272",565
+East London,18,New Cross,Surrey Quays,"8,003","1,093",553,252
+East London,19,Surrey Quays,Canada Water,"12,158","12,134","4,834","1,556"
+East London,20,Canada Water,Rotherhithe,"16,199","8,683","3,891","1,625"
+East London,21,Rotherhithe,Wapping,"20,999","8,473","3,897","1,633"
+East London,22,Wapping,Shadwell ,"23,671","8,332","3,638","1,506"
+East London,23,Shadwell ,Whitechapel,"26,913","8,981","4,139","1,588"
+East London,24,Whitechapel,Shoreditch High Street,"34,727","7,108","3,805","1,378"
+East London,25,Shoreditch High Street,Hoxton,"41,932","6,186","3,715","1,506"
+East London,26,Hoxton,Haggerston,"50,206","5,892","3,496","1,440"
+East London,27,Haggerston,Dalston Junction,"67,921","5,653","3,119","1,257"
+East London,28,Dalston Junction,Canonbury,"73,028","4,083","2,029",850
+East London,29,Canonbury,Highbury & Islington,"78,197","3,661","1,706",665
+East London,1,Highbury & Islington,Canonbury,"87,246","3,926","2,590","1,034"
+East London,2,Canonbury,Dalston Junction,"100,941","4,610","2,729","1,095"
+East London,3,Dalston Junction,Haggerston,"108,685","4,871","2,848","1,365"
+East London,4,Haggerston,Hoxton,"121,530","5,042","2,678","1,290"
+East London,5,Hoxton,Shoreditch High Street,"147,742","6,096","3,038","1,450"
+East London,6,Shoreditch High Street,Whitechapel,"143,373","10,922","5,682","2,549"
+East London,7,Whitechapel,Shadwell ,"128,817","12,710","7,142","3,034"
+East London,8,Shadwell ,Wapping,"124,315","12,180","7,120","2,972"
+East London,9,Wapping,Rotherhithe,"106,868","12,526","7,149","2,965"
+East London,10,Rotherhithe,Canada Water,"87,361","11,986","7,098","2,974"
+East London,11,Canada Water,Surrey Quays,"68,180","18,188","11,849","5,057"
+East London,12,Surrey Quays,New Cross,"44,396","1,650",784,261
+East London,13,Surrey Quays,New Cross Gate,"34,931","10,866","7,519","3,158"
+East London,14,New Cross Gate,Brockley,0,"9,208","6,831","2,769"
+East London,15,Brockley,Honor Oak Park,"9,191","7,787","5,543","2,282"
+East London,16,Honor Oak Park,Forest Hill,"9,601","6,683","4,681","1,908"
+East London,17,Forest Hill,Sydenham,"9,820","4,967","3,577","1,474"
+East London,18,Sydenham,Penge West,"9,587","2,359","1,422",570
+East London,19,Penge West,Anerley,"11,392","2,140","1,266",488
+East London,20,Anerley,Norwood Junction,"13,091","1,638","1,047",447
+East London,21,Norwood Junction,West Croydon NR,"1,861","1,245",710,285
+East London,22,Sydenham,Crystal Palace,"4,117","1,322","1,116",427
+East London,23,Surrey Quays,Queens Road Peckham,"5,098","3,665","2,353","1,010"
+East London,24,Queens Road Peckham,Peckham Rye,"5,625","3,030","1,951",823
+East London,25,Peckham Rye,Denmark Hill,"6,397","2,315","1,542",614
+East London,26,Denmark Hill,Clapham High Street,"10,467","3,062","1,500",485
+East London,27,Clapham High Street,Wandsworth Road,"13,402","2,809","1,280",427
+East London,28,Wandsworth Road,Clapham Junction,"15,750","2,628","1,104",338
+East London,29,Wandsworth Road,Battersea Park,"19,779",0,0,35
+Metropolitan,1,Aldgate,Liverpool Street ,"3,458","5,732","1,341",294
+Metropolitan,2,Liverpool Street ,Moorgate,"14,564","12,268","4,077","1,079"
+Metropolitan,3,Moorgate,Barbican,"14,243","15,566","5,092","1,261"
+Metropolitan,4,Barbican,Farringdon,"15,330","17,982","6,080","1,515"
+Metropolitan,5,Farringdon,King's Cross St. Pancras,"16,837","23,655","8,021","1,861"
+Metropolitan,6,King's Cross St. Pancras,Euston Square,"20,228","21,465","8,614","2,212"
+Metropolitan,7,Euston Square,Great Portland Street,"20,509","21,366","9,338","2,339"
+Metropolitan,8,Great Portland Street,Baker Street,"20,573","22,367","10,046","2,619"
+Metropolitan,9,Baker Street,Finchley Road,"32,570","25,571","13,715","4,473"
+Metropolitan,10,Finchley Road,Wembley Park,"39,977","29,883","17,200","5,504"
+Metropolitan,11,Wembley Park,Preston Road,"35,135","24,900","15,398","4,966"
+Metropolitan,12,Preston Road,Northwick Park,"33,687","23,493","14,334","4,816"
+Metropolitan,13,Northwick Park,Harrow-on-the-Hill,"31,518","21,862","13,819","4,610"
+Metropolitan,14,Harrow-on-the-Hill,North Harrow,"13,575","10,122","6,776","1,999"
+Metropolitan,15,North Harrow,Pinner,"12,444","8,812","6,257","1,773"
+Metropolitan,16,Pinner,Northwood Hills,"10,084","7,259","5,011","1,616"
+Metropolitan,17,Northwood Hills,Northwood,"8,887","6,270","4,489","1,403"
+Metropolitan,18,Northwood,Moor Park,"7,020","5,013","3,654","1,070"
+Metropolitan,19,Moor Park,Croxley,"2,423","1,590","1,149",367
+Metropolitan,20,Croxley,Watford,"1,661",865,719,210
+Metropolitan,21,Moor Park,Rickmansworth,"4,254","3,098","2,267",642
+Metropolitan,22,Rickmansworth,Chorleywood,"3,255","2,202","1,874",467
+Metropolitan,23,Chorleywood,Chalfont & Latimer,"2,653","1,796","1,527",451
+Metropolitan,24,Chalfont & Latimer,Chesham,992,657,533,183
+Metropolitan,25,Chalfont & Latimer,Amersham,772,580,533,176
+Metropolitan,26,Harrow-on-the-Hill,West Harrow,"12,959","8,327","4,789","1,675"
+Metropolitan,27,West Harrow,Rayners Lane,"12,294","7,667","4,488","1,644"
+Metropolitan,28,Rayners Lane,Eastcote,"9,861","5,680","3,342","1,284"
+Metropolitan,29,Eastcote,Ruislip Manor,"8,887","4,428","2,724","1,058"
+Metropolitan,30,Ruislip Manor,Ruislip,"8,241","3,811","2,268",957
+Metropolitan,31,Ruislip,Ickenham,"7,558","3,117","1,937",806
+Metropolitan,32,Ickenham,Hillingdon,"7,189","2,725","1,713",717
+Metropolitan,33,Hillingdon,Uxbridge,"6,143","2,094","1,290",566
+Metropolitan,1,Uxbridge,Hillingdon,"6,855","3,770",872,174
+Metropolitan,2,Hillingdon,Ickenham,"8,125","4,000",953,191
+Metropolitan,3,Ickenham,Ruislip,"8,530","4,028",978,197
+Metropolitan,4,Ruislip,Ruislip Manor,"9,228","4,160",998,216
+Metropolitan,5,Ruislip Manor,Eastcote,"9,994","4,166","1,028",235
+Metropolitan,6,Eastcote,Rayners Lane,"11,141","4,214","1,080",233
+Metropolitan,7,Rayners Lane,West Harrow,"13,541","4,836","1,309",286
+Metropolitan,8,West Harrow,Harrow-on-the-Hill,"14,381","4,844","1,332",292
+Metropolitan,9,Amersham,Chalfont & Latimer,"1,059",293,52,16
+Metropolitan,10,Chesham,Chalfont & Latimer,"1,115",237,46,12
+Metropolitan,11,Chalfont & Latimer,Chorleywood,"3,064",967,133,61
+Metropolitan,12,Chorleywood,Rickmansworth,"3,719","1,133",175,74
+Metropolitan,13,Rickmansworth,Moor Park,"4,830","1,562",230,92
+Metropolitan,14,Watford,Croxley,"1,714",641,125,28
+Metropolitan,15,Croxley,Moor Park,"2,532",875,155,32
+Metropolitan,16,Moor Park,Northwood,"7,725","2,877",435,135
+Metropolitan,17,Northwood,Northwood Hills,"9,781","3,475",516,161
+Metropolitan,18,Northwood Hills,Pinner,"11,158","3,802",593,201
+Metropolitan,19,Pinner,North Harrow,"13,577","3,859",677,220
+Metropolitan,20,North Harrow,Harrow-on-the-Hill,"14,866","3,952",715,223
+Metropolitan,21,Harrow-on-the-Hill,Northwick Park,"33,894","9,364","2,177",528
+Metropolitan,22,Northwick Park,Preston Road,"36,364","10,547","2,567",593
+Metropolitan,23,Preston Road,Wembley Park,"38,030","10,409","2,606",612
+Metropolitan,24,Wembley Park,Finchley Road,"43,506","10,814","2,632",776
+Metropolitan,25,Finchley Road,Baker Street,"28,330","7,915","1,890",554
+Metropolitan,26,Baker Street,Great Portland Street,"24,888","9,958","2,822",700
+Metropolitan,27,Great Portland Street,Euston Square,"25,030","11,899","3,225",815
+Metropolitan,28,Euston Square,King's Cross St. Pancras,"24,664","13,322","3,774",880
+Metropolitan,29,King's Cross St. Pancras,Farringdon,"23,000","11,764","3,702",861
+Metropolitan,30,Farringdon,Barbican,"19,954","13,675","4,072",970
+Metropolitan,31,Barbican,Moorgate,"18,754","14,173","4,148","1,006"
+Metropolitan,32,Moorgate,Liverpool Street ,"18,952","13,870","4,196","1,039"
+Metropolitan,33,Liverpool Street ,Aldgate,"6,343","2,780",788,226
+Northern,1,Morden,South Wimbledon,"11,573","2,109",703,179
+Northern,2,South Wimbledon,Colliers Wood,"16,508","3,426","1,164",325
+Northern,3,Colliers Wood,Tooting Broadway,"24,408","4,645","1,617",450
+Northern,4,Tooting Broadway,Tooting Bec,"39,828","8,489","3,119",882
+Northern,5,Tooting Bec,Balham ,"47,309","9,662","3,582",984
+Northern,6,Balham ,Clapham South,"57,290","11,536","4,147","1,200"
+Northern,7,Clapham South,Clapham Common,"64,949","12,858","4,664","1,369"
+Northern,8,Clapham Common,Clapham North,"73,461","14,410","5,342","1,599"
+Northern,9,Clapham North,Stockwell,"79,517","15,480","5,792","1,782"
+Northern,10,Stockwell,Oval,"65,983","14,151","5,379","2,067"
+Northern,11,Oval,Kennington,"69,575","16,096","5,662","2,126"
+Northern,12,Kennington,Waterloo ,"25,655","6,174","1,824",454
+Northern,13,Waterloo ,Embankment,"55,039","14,638","4,998","1,673"
+Northern,14,Embankment,Charing Cross ,"64,742","18,913","6,623","2,337"
+Northern,15,Charing Cross ,Leicester Square,"69,618","20,640","7,689","3,152"
+Northern,16,Leicester Square,Tottenham Court Road,"70,787","21,907","10,746","5,906"
+Northern,17,Tottenham Court Road,Goodge Street,"69,143","25,005","13,515","6,945"
+Northern,18,Goodge Street,Warren Street,"67,521","25,971","14,388","7,352"
+Northern,19,Warren Street,Euston ,"67,394","27,640","15,546","7,585"
+Northern,20,Euston ,Mornington Crescent,"67,978","25,658","15,332","7,143"
+Northern,21,Mornington Crescent,Camden Town,"66,284","25,480","15,529","7,033"
+Northern,22,Kennington,Elephant & Castle ,"55,784","12,503","5,255","2,250"
+Northern,23,Elephant & Castle ,Borough,"59,714","15,213","6,038","2,491"
+Northern,24,Borough,London Bridge ,"61,237","16,864","6,641","2,636"
+Northern,25,London Bridge ,Bank and Monument,"89,344","25,181","10,569","4,584"
+Northern,26,Bank and Monument,Moorgate,"81,594","27,875","11,783","4,634"
+Northern,27,Moorgate,Old Street,"78,781","29,868","13,349","5,049"
+Northern,28,Old Street,Angel,"78,457","33,281","14,909","5,592"
+Northern,29,Angel,King's Cross St. Pancras,"79,013","34,642","15,752","6,286"
+Northern,30,King's Cross St. Pancras,Euston ,"63,028","27,949","14,040","5,278"
+Northern,31,Euston ,Camden Town,"56,215","24,831","14,334","5,598"
+Northern,32,Camden Town,Kentish Town,"49,975","26,888","17,161","7,591"
+Northern,33,Kentish Town,Tufnell Park,"43,549","25,584","15,961","6,953"
+Northern,34,Tufnell Park,Archway,"39,454","23,575","14,761","6,501"
+Northern,35,Archway,Highgate,"31,414","19,772","12,500","5,455"
+Northern,36,Highgate,East Finchley,"25,650","16,604","10,556","4,627"
+Northern,37,East Finchley,Finchley Central,"19,783","12,738","8,360","3,559"
+Northern,38,Finchley Central,Mill Hill East,"1,082",793,463,155
+Northern,39,Finchley Central,West Finchley,"12,307","7,420","5,133","2,284"
+Northern,40,West Finchley,Woodside Park,"10,894","6,363","4,501","2,037"
+Northern,41,Woodside Park,Totteridge & Whetstone,"6,553","3,649","2,486","1,081"
+Northern,42,Totteridge & Whetstone,High Barnet,"4,054","2,152","1,515",665
+Northern,43,Camden Town,Chalk Farm,"42,767","20,660","12,296","5,234"
+Northern,44,Chalk Farm,Belsize Park,"37,283","19,164","10,746","4,944"
+Northern,45,Belsize Park,Hampstead,"33,208","17,742","10,066","4,398"
+Northern,46,Hampstead,Golders Green,"28,926","16,448","9,330","4,190"
+Northern,47,Golders Green,Brent Cross,"22,724","13,186","7,468","3,349"
+Northern,48,Brent Cross,Hendon Central,"20,845","11,952","7,154","3,029"
+Northern,49,Hendon Central,Colindale,"15,880","9,132","5,359","2,231"
+Northern,50,Colindale,Burnt Oak,"9,319","5,580","2,836","1,139"
+Northern,51,Burnt Oak,Edgware,"5,513","2,893","1,572",646
+Northern,1,Edgware,Burnt Oak,"5,635","1,187",401,117
+Northern,2,Burnt Oak,Colindale,"9,623","2,015",652,172
+Northern,3,Colindale,Hendon Central,"17,119","3,910","1,196",344
+Northern,4,Hendon Central,Brent Cross,"23,101","6,132","1,933",519
+Northern,5,Brent Cross,Golders Green,"25,128","6,487","2,151",563
+Northern,6,Golders Green,Hampstead,"31,781","8,022","2,713",706
+Northern,7,Hampstead,Belsize Park,"35,545","9,335","3,207",905
+Northern,8,Belsize Park,Chalk Farm,"39,995","11,428","3,810","1,090"
+Northern,9,Chalk Farm,Camden Town,"47,329","12,897","4,653","2,051"
+Northern,10,High Barnet,Totteridge & Whetstone,"4,328","1,103",269,75
+Northern,11,Totteridge & Whetstone,Woodside Park,"6,989","1,646",405,115
+Northern,12,Woodside Park,West Finchley,"10,951","2,566",681,187
+Northern,13,West Finchley,Finchley Central,"12,571","2,796",758,196
+Northern,14,Mill Hill East,Finchley Central,"1,117",560,87,35
+Northern,15,Finchley Central,East Finchley,"21,031","5,429","1,441",351
+Northern,16,East Finchley,Highgate,"27,616","6,737","1,872",451
+Northern,17,Highgate,Archway,"33,663","7,800","2,261",564
+Northern,18,Archway,Tufnell Park,"42,158","9,635","2,980",758
+Northern,19,Tufnell Park,Kentish Town,"47,324","10,522","3,267","1,015"
+Northern,20,Kentish Town,Camden Town,"53,716","12,503","4,079","1,618"
+Northern,21,Camden Town,Mornington Crescent,"63,510","13,530","4,563","2,210"
+Northern,22,Mornington Crescent,Euston ,"66,783","15,688","5,201","2,390"
+Northern,23,Euston ,Warren Street,"74,637","17,098","6,163","2,485"
+Northern,24,Warren Street,Goodge Street,"73,314","18,668","6,399","2,484"
+Northern,25,Goodge Street,Tottenham Court Road,"74,818","22,546","8,269","2,952"
+Northern,26,Tottenham Court Road,Leicester Square,"74,175","25,968","10,870","4,320"
+Northern,27,Leicester Square,Charing Cross ,"73,900","25,702","13,481","7,255"
+Northern,28,Charing Cross ,Embankment,"73,198","23,000","13,421","7,616"
+Northern,29,Embankment,Waterloo ,"60,797","23,823","13,010","7,515"
+Northern,30,Waterloo ,Kennington,"27,531","11,522","7,027","4,398"
+Northern,31,Kennington,Oval,"66,780","34,787","21,653","10,632"
+Northern,32,Camden Town,Euston ,"61,599","16,718","6,036","3,190"
+Northern,33,Euston ,King's Cross St. Pancras,"63,413","18,465","7,607","3,373"
+Northern,34,King's Cross St. Pancras,Angel,"81,977","23,291","10,681","4,518"
+Northern,35,Angel,Old Street,"79,882","24,612","11,605","5,195"
+Northern,36,Old Street,Moorgate,"78,164","30,698","13,679","6,264"
+Northern,37,Moorgate,Bank and Monument,"77,206","36,614","17,242","7,562"
+Northern,38,Bank and Monument,London Bridge ,"79,584","37,413","20,483","8,557"
+Northern,39,London Bridge ,Borough,"56,127","28,477","16,421","7,509"
+Northern,40,Borough,Elephant & Castle ,"54,139","28,493","16,684","7,376"
+Northern,41,Elephant & Castle ,Kennington,"50,830","26,955","16,421","6,996"
+Northern,42,Oval,Stockwell,"63,841","33,102","20,791","9,837"
+Northern,43,Stockwell,Clapham North,"75,964","37,323","24,469","11,257"
+Northern,44,Clapham North,Clapham Common,"69,952","34,584","22,554","10,457"
+Northern,45,Clapham Common,Clapham South,"61,020","30,190","19,825","9,155"
+Northern,46,Clapham South,Balham ,"53,906","26,249","17,049","7,901"
+Northern,47,Balham ,Tooting Bec,"44,169","21,002","13,442","6,460"
+Northern,48,Tooting Bec,Tooting Broadway,"37,639","17,688","10,859","5,180"
+Northern,49,Tooting Broadway,Colliers Wood,"23,176","11,449","6,747","3,199"
+Northern,50,Colliers Wood,South Wimbledon,"15,949","7,833","4,524","2,145"
+Northern,51,South Wimbledon,Morden,"10,969","5,813","3,193","1,521"
+Piccadilly,1,Uxbridge,Hillingdon,"1,308","1,059",267,55
+Piccadilly,2,Hillingdon,Ickenham,"1,550","1,138",293,60
+Piccadilly,3,Ickenham,Ruislip,"1,638","1,157",314,64
+Piccadilly,4,Ruislip,Ruislip Manor,"1,806","1,135",317,71
+Piccadilly,5,Ruislip Manor,Eastcote,"1,990","1,135",313,76
+Piccadilly,6,Eastcote,Rayners Lane,"2,307","1,198",311,82
+Piccadilly,7,Rayners Lane,South Harrow,"4,724","1,849",612,169
+Piccadilly,8,South Harrow,Sudbury Hill,"6,329","2,034",651,183
+Piccadilly,9,Sudbury Hill,Sudbury Town,"6,329","2,046",662,171
+Piccadilly,10,Sudbury Town,Alperton,"7,747","2,110",694,174
+Piccadilly,11,Alperton,Park Royal,"9,720","2,426",802,206
+Piccadilly,12,Park Royal,North Ealing,"10,819","3,198",971,251
+Piccadilly,13,North Ealing,Ealing Common,"11,638","3,317",990,255
+Piccadilly,14,Ealing Common,Acton Town,"12,695","3,453","1,029",265
+Piccadilly,15,Heathrow Terminal 5,Heathrow Terminals 123,"7,162","1,374","1,188",434
+Piccadilly,16,Heathrow Terminal 4,Heathrow Terminals 123,"3,603",800,490,184
+Piccadilly,17,Heathrow Terminals 123,Hatton Cross,"22,859","4,184","3,442","1,279"
+Piccadilly,18,Hatton Cross,Hounslow West,"25,746","5,437","3,519","1,443"
+Piccadilly,19,Hounslow West,Hounslow Central,"28,767","5,766","3,607","1,316"
+Piccadilly,20,Hounslow Central,Hounslow East,"31,646","6,329","3,654","1,333"
+Piccadilly,21,Hounslow East,Osterley,"35,299","7,055","3,770","1,294"
+Piccadilly,22,Osterley,Boston Manor,"37,331","7,668","3,818","1,373"
+Piccadilly,23,Boston Manor,Northfields,"38,974","8,138","3,972","1,360"
+Piccadilly,24,Northfields,South Ealing,"42,435","9,035","4,083","1,461"
+Piccadilly,25,South Ealing,Acton Town,"45,811","9,619","4,319","1,478"
+Piccadilly,26,Acton Town,Turnham Green,"58,095","11,863","4,826","1,595"
+Piccadilly,27,Turnham Green,Hammersmith ,"58,008","11,872","4,901","1,693"
+Piccadilly,28,Hammersmith ,Barons Court,"68,091","16,665","6,455","2,547"
+Piccadilly,29,Barons Court,Earl's Court,"73,317","18,484","6,931","2,614"
+Piccadilly,30,Earl's Court,Gloucester Road,"82,186","19,718","7,288","2,559"
+Piccadilly,31,Gloucester Road,South Kensington,"85,624","20,583","7,669","2,669"
+Piccadilly,32,South Kensington,Knightsbridge,"95,445","25,398","9,444","3,496"
+Piccadilly,33,Knightsbridge,Hyde Park Corner,"112,160","31,231","12,862","4,467"
+Piccadilly,34,Hyde Park Corner,Green Park,"114,692","32,738","13,277","4,794"
+Piccadilly,35,Green Park,Piccadilly Circus,"108,246","29,029","11,943","4,442"
+Piccadilly,36,Piccadilly Circus,Leicester Square,"97,658","26,836","12,417","5,534"
+Piccadilly,37,Leicester Square,Covent Garden,"97,191","25,199","13,348","7,208"
+Piccadilly,38,Covent Garden,Holborn,"86,923","24,958","14,490","8,686"
+Piccadilly,39,Holborn,Russell Square,"77,471","27,087","15,579","8,760"
+Piccadilly,40,Russell Square,King's Cross St. Pancras,"73,154","27,791","16,482","8,688"
+Piccadilly,41,King's Cross St. Pancras,Caledonian Road,"53,857","25,238","14,942","7,994"
+Piccadilly,42,Caledonian Road,Holloway Road,"49,743","23,712","13,901","7,562"
+Piccadilly,43,Holloway Road,Arsenal,"44,650","21,615","12,667","7,000"
+Piccadilly,44,Arsenal,Finsbury Park ,"42,368","20,726","11,749","6,682"
+Piccadilly,45,Finsbury Park ,Manor House,"56,426","26,306","14,915","7,872"
+Piccadilly,46,Manor House,Turnpike Lane,"48,248","22,477","12,409","6,402"
+Piccadilly,47,Turnpike Lane,Wood Green,"36,644","16,594","9,177","4,632"
+Piccadilly,48,Wood Green,Bounds Green,"23,486","10,902","6,372","3,072"
+Piccadilly,49,Bounds Green,Arnos Grove,"17,091","7,671","4,432","2,106"
+Piccadilly,50,Arnos Grove,Southgate,"12,400","5,424","3,303","1,496"
+Piccadilly,51,Southgate,Oakwood,"6,502","2,402","1,476",750
+Piccadilly,52,Oakwood,Cockfosters,"2,712",993,588,304
+Piccadilly,1,Cockfosters,Oakwood,"2,713",460,141,58
+Piccadilly,2,Oakwood,Southgate,"6,479","1,085",322,106
+Piccadilly,3,Southgate,Arnos Grove,"12,366","2,191",721,217
+Piccadilly,4,Arnos Grove,Bounds Green,"17,631","3,079","1,012",290
+Piccadilly,5,Bounds Green,Wood Green,"24,813","4,195","1,360",381
+Piccadilly,6,Wood Green,Turnpike Lane,"38,609","6,546","2,221",771
+Piccadilly,7,Turnpike Lane,Manor House,"51,220","8,331","2,934",986
+Piccadilly,8,Manor House,Finsbury Park ,"60,520","9,945","3,589","1,210"
+Piccadilly,9,Finsbury Park ,Arsenal,"48,670","8,044","2,851",995
+Piccadilly,10,Arsenal,Holloway Road,"51,384","8,429","2,904","1,016"
+Piccadilly,11,Holloway Road,Caledonian Road,"56,893","10,205","3,492","1,202"
+Piccadilly,12,Caledonian Road,King's Cross St. Pancras,"61,659","11,547","3,970","1,362"
+Piccadilly,13,King's Cross St. Pancras,Russell Square,"78,649","16,266","6,040","2,018"
+Piccadilly,14,Russell Square,Holborn,"82,626","18,424","7,627","2,418"
+Piccadilly,15,Holborn,Covent Garden,"88,536","21,546","9,594","2,932"
+Piccadilly,16,Covent Garden,Leicester Square,"86,292","22,084","11,041","4,736"
+Piccadilly,17,Leicester Square,Piccadilly Circus,"94,086","23,594","13,598","6,714"
+Piccadilly,18,Piccadilly Circus,Green Park,"102,122","25,192","16,082","8,919"
+Piccadilly,19,Green Park,Hyde Park Corner,"114,342","30,149","18,084","9,303"
+Piccadilly,20,Hyde Park Corner,Knightsbridge,"111,577","30,030","18,268","9,553"
+Piccadilly,21,Knightsbridge,South Kensington,"96,825","28,710","18,640","9,808"
+Piccadilly,22,South Kensington,Gloucester Road,"81,517","26,158","17,745","9,644"
+Piccadilly,23,Gloucester Road,Earl's Court,"77,883","25,471","17,456","9,295"
+Piccadilly,24,Earl's Court,Barons Court,"67,290","24,417","14,545","7,428"
+Piccadilly,25,Barons Court,Hammersmith ,"63,550","23,300","13,872","6,793"
+Piccadilly,26,Hammersmith ,Turnham Green,"55,517","23,249","12,255","6,019"
+Piccadilly,27,Turnham Green,Acton Town,"54,538","23,192","12,412","5,652"
+Piccadilly,28,Acton Town,Ealing Common,"12,196","8,423","4,023","1,550"
+Piccadilly,29,Ealing Common,North Ealing,"11,405","8,152","3,602","1,432"
+Piccadilly,30,North Ealing,Park Royal,"10,701","7,904","3,397","1,308"
+Piccadilly,31,Park Royal,Alperton,"9,436","7,807","3,298","1,257"
+Piccadilly,32,Alperton,Sudbury Town,"7,302","6,384","2,840",996
+Piccadilly,33,Sudbury Town,Sudbury Hill,"6,198","5,448","2,410",860
+Piccadilly,34,Sudbury Hill,South Harrow,"6,198","4,428","1,909",667
+Piccadilly,35,South Harrow,Rayners Lane,"4,618","3,182","1,421",455
+Piccadilly,36,Rayners Lane,Eastcote,"2,529","1,645",815,257
+Piccadilly,37,Eastcote,Ruislip Manor,"2,180","1,256",627,206
+Piccadilly,38,Ruislip Manor,Ruislip,"1,989","1,025",528,170
+Piccadilly,39,Ruislip,Ickenham,"1,802",821,463,141
+Piccadilly,40,Ickenham,Hillingdon,"1,714",741,414,131
+Piccadilly,41,Hillingdon,Uxbridge,"1,475",557,317,100
+Piccadilly,42,Acton Town,South Ealing,"42,752","15,785","8,627","3,826"
+Piccadilly,43,South Ealing,Northfields,"39,675","14,177","7,913","3,303"
+Piccadilly,44,Northfields,Boston Manor,"36,396","12,386","6,710","2,722"
+Piccadilly,45,Boston Manor,Osterley,"34,945","11,706","6,235","2,418"
+Piccadilly,46,Osterley,Hounslow East,"33,064","10,663","5,748","2,190"
+Piccadilly,47,Hounslow East,Hounslow Central,"29,264","8,790","4,494","1,659"
+Piccadilly,48,Hounslow Central,Hounslow West,"26,431","7,214","3,503","1,228"
+Piccadilly,49,Hounslow West,Hatton Cross,"23,462","5,822","2,428",781
+Piccadilly,50,Hatton Cross,Heathrow Terminal 4,"3,724",821,436,116
+Piccadilly,51,Hatton Cross,Heathrow Terminals 123,"17,092","4,087","1,487",326
+Piccadilly,52,Heathrow Terminals 123,Heathrow Terminal 5,"6,856","1,561",597,130
+Victoria,1,Brixton ,Stockwell,"43,081","7,417","3,328","4,389"
+Victoria,2,Stockwell,Vauxhall ,"71,623","12,455","5,328","4,574"
+Victoria,3,Vauxhall ,Pimlico,"102,676","25,196","8,595","5,264"
+Victoria,4,Pimlico,Victoria ,"111,711","30,203","10,063","5,554"
+Victoria,5,Victoria ,Green Park,"187,547","54,260","20,551","9,519"
+Victoria,6,Green Park,Oxford Circus,"183,404","57,186","22,597","10,753"
+Victoria,7,Oxford Circus,Warren Street,"177,273","65,907","31,883","14,185"
+Victoria,8,Warren Street,Euston ,"173,735","67,835","33,161","14,667"
+Victoria,9,Euston ,King's Cross St. Pancras,"142,986","59,487","29,896","13,685"
+Victoria,10,King's Cross St. Pancras,Highbury & Islington,"121,846","57,680","31,594","14,035"
+Victoria,11,Highbury & Islington,Finsbury Park ,"104,002","53,171","27,222","12,719"
+Victoria,12,Finsbury Park ,Seven Sisters,"74,838","39,087","19,407","8,881"
+Victoria,13,Seven Sisters,Tottenham Hale ,"49,400","26,280","12,902","5,781"
+Victoria,14,Tottenham Hale ,Blackhorse Road,"34,534","18,891","9,826","4,355"
+Victoria,15,Blackhorse Road,Walthamstow Central,"24,170","12,642","6,553","2,823"
+Victoria,1,Walthamstow Central,Blackhorse Road,"25,485","3,882","1,381",438
+Victoria,2,Blackhorse Road,Tottenham Hale ,"37,567","5,943","2,110",638
+Victoria,3,Tottenham Hale ,Seven Sisters,"53,814","9,148","3,482","1,022"
+Victoria,4,Seven Sisters,Finsbury Park ,"82,700","14,401","5,385","1,628"
+Victoria,5,Finsbury Park ,Highbury & Islington,"131,004","23,770","9,692","3,436"
+Victoria,6,Highbury & Islington,King's Cross St. Pancras,"147,764","28,038","11,075","4,582"
+Victoria,7,King's Cross St. Pancras,Euston ,"158,150","34,791","15,136","5,912"
+Victoria,8,Euston ,Warren Street,"181,571","42,147","18,782","7,197"
+Victoria,9,Warren Street,Oxford Circus,"186,483","49,554","22,249","8,322"
+Victoria,10,Oxford Circus,Green Park,"180,154","62,821","32,905","12,893"
+Victoria,11,Green Park,Victoria ,"183,603","68,808","37,584","15,372"
+Victoria,12,Victoria ,Pimlico,"103,638","39,720","25,683","11,202"
+Victoria,13,Pimlico,Vauxhall ,"94,853","37,711","24,553","10,574"
+Victoria,14,Vauxhall ,Stockwell,"66,561","27,117","18,342","7,992"
+Victoria,15,Stockwell,Brixton ,"41,178","15,972","11,553","5,361"
+Waterloo & City,1,Waterloo ,Bank and Monument,"5,554","5,197","1,465",386
+Waterloo & City,1,Bank and Monument,Waterloo ,"6,348","18,237","6,517","1,374"
