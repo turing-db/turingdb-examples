@@ -437,7 +437,7 @@ def create_graph_from_df(
     return G
 
 
-def build_create_command_from_networkx(G, edge_type_key="type"):
+def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="type"):
     """Build CREATE command from NetworkX object"""
 
     def escape_value(value):
@@ -473,9 +473,13 @@ def build_create_command_from_networkx(G, edge_type_key="type"):
     for i, (node_id, attrs) in enumerate(all_nodes.items()):
         var_name = f"n{i}"
         props = ", ".join([f'"{k}":"{escape_value(v)}"' for k, v in attrs.items()])
-        node_type = attrs.get("type", "Node")
+        node_type = attrs.get(node_type_key, "Node")
         # Convert node_type to PascalCase to avoid issues with spaces in queries
-        node_type = "".join(x for x in node_type.title() if not x.isspace())
+        node_type = (
+            "".join(x for x in node_type.title() if not x.isspace())
+            if " " in node_type
+            else node_type[0].upper() + node_type[1:]
+        )
         node_parts.append(f'({var_name}:{node_type} {{"id":"{node_id}", {props}}})')
 
     # Create edge patterns using node variables
