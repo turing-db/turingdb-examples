@@ -476,8 +476,8 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         node_type = attrs.get(node_type_key, "Node")
         # Convert node_type to PascalCase to avoid issues with spaces in queries
         node_type = (
-            "".join(x for x in node_type.title() if not x.isspace())
-            if " " in node_type
+            "".join(x.title() for x in node_type.replace("_", " ").split())
+            if " " in node_type or "_" in node_type
             else node_type[0].upper() + node_type[1:]
         )
         node_parts.append(f'({var_name}:{node_type} {{"id":"{node_id}", {props}}})')
