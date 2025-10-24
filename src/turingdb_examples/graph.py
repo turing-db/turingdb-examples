@@ -480,7 +480,9 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
             if " " in node_type or "_" in node_type
             else node_type[0].upper() + node_type[1:]
         )
-        node_parts.append(f'({var_name}:{node_type} {{"id":"{node_id}", {props}}})')
+        node_parts.append(
+            f'({var_name}:{node_type} {{"id":"{node_id}"{", " + props if props else ""}}})'
+        )
 
     # Create edge patterns using node variables
     node_to_var = {node_id: f"n{i}" for i, node_id in enumerate(all_nodes.keys())}
