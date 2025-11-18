@@ -2061,6 +2061,20 @@ wheels = [
 ]
 
 [[package]]
+name = "seaborn"
+version = "0.13.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "pandas" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/86/59/a451d7420a77ab0b98f7affa3a1d78a313d2f7281a57afb1a34bae8ab412/seaborn-0.13.2.tar.gz", hash = "sha256:93e60a40988f4d65e9f4885df477e2fdaff6b73a9ded434c1ab356dd57eefff7", size = 1457696, upload-time = "2024-01-25T13:21:52.551Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl", hash = "sha256:636f8336facf092165e27924f223d3c62ca560b1f2bb5dff7ab7fad265361987", size = 294914, upload-time = "2024-01-25T13:21:49.598Z" },
+]
+
+[[package]]
 name = "send2trash"
 version = "1.8.3"
 source = { registry = "https://pypi.org/simple" }
@@ -2187,7 +2201,8 @@ wheels = [
 
 [[package]]
 name = "turingdb"
-source = { editable = "../turingdb-sdk-python" }
+version = "0.2.7"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
     { name = "click" },
@@ -2197,22 +2212,9 @@ dependencies = [
     { name = "pandas-stubs" },
     { name = "prompt-toolkit" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "boto3", specifier = ">=1.40.55" },
-    { name = "click", specifier = ">=8.2.1" },
-    { name = "httpx", specifier = ">=0.28.1" },
-    { name = "orjson", specifier = ">=3.11.1" },
-    { name = "pandas", specifier = ">=2.3.1" },
-    { name = "pandas-stubs", specifier = ">=2.3.0.250703" },
-    { name = "prompt-toolkit", specifier = ">=3.0.52" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "mypy", specifier = ">=1.17.1" },
-    { name = "ruff", specifier = ">=0.12.8" },
+sdist = { url = "https://files.pythonhosted.org/packages/84/ff/2180a8197a01f6fea024799c64ab9351f7226e22e5905933f4fb1c80f704/turingdb-0.2.7.tar.gz", hash = "sha256:2dbcada45440bf9c7b90853ec3b8587ad2f2f7e6646a4c89d7bd3213403e9a80", size = 76949, upload-time = "2025-11-18T18:25:49.016Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d4/30/6b7c9ba9abe466ac3db1cd9138243ae88633ff041565b76a841ef7099304/turingdb-0.2.7-py3-none-any.whl", hash = "sha256:aef67091cf9c39f6eacb0c562b414d79b2cb127c3796cac5ef99375cb0dd4426", size = 14276, upload-time = "2025-11-18T18:25:47.135Z" },
 ]
 
 [[package]]
@@ -2231,6 +2233,7 @@ dependencies = [
     { name = "python-dotenv" },
     { name = "pyvis" },
     { name = "ruff" },
+    { name = "seaborn" },
     { name = "turingdb" },
 ]
 
@@ -2254,7 +2257,8 @@ requires-dist = [
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "pyvis", specifier = ">=0.3.2" },
     { name = "ruff", specifier = ">=0.13.2" },
-    { name = "turingdb", editable = "../turingdb-sdk-python" },
+    { name = "seaborn", specifier = ">=0.13.2" },
+    { name = "turingdb", specifier = "==0.2.7" },
 ]
 
 [package.metadata.requires-dev]
