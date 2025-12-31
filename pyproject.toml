@@ -18,7 +18,7 @@ dependencies = [
     "pyvis>=0.3.2",
     "ruff>=0.13.2",
     "seaborn>=0.13.2",
-    "turingdb==0.2.7",
+    "turingdb",
 ]
 
 keywords = ["turingdb", "examples", "database"]
@@ -51,3 +51,6 @@ addopts = [
     "--cov-report=html",
     "--cov-report=term-missing"
 ]
+
+[tool.uv.sources]
+turingdb = { path = "../turingdb-sdk-python", editable = true }
