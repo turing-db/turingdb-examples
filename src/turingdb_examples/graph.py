@@ -442,6 +442,9 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
 
     def escape_value(value):
         """Escape quotes and special characters in property values"""
+        # if not isinstance(value, str):
+        #     return value
+
         import re
 
         value_str = str(value)
@@ -450,6 +453,7 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         value_str = value_str.replace("\n", " ")
         value_str = value_str.replace("\r", " ")
         value_str = value_str.replace("\t", " ")
+        value_str = value_str.replace("\\", "")
         # Remove or replace other problematic characters
         value_str = re.sub(
             r"[^\w\s\-\.\,\:\;\(\)\[\]\{\}\/\@\#\$\%\&\*\+\=\<\>\?\!\~\`\|\\]",
@@ -458,7 +462,7 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         )
         # Clean up multiple spaces
         value_str = re.sub(r"\s+", " ", value_str).strip()
-        return value_str
+        return f'"{value_str}"'
 
     # Collect all unique nodes
     all_nodes = {}
@@ -469,10 +473,19 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
     node_parts = []
     edge_parts = []
 
+    # TODO: Set properties type to correct one depending on one in networkx graph
+    # ...
+
     # Create node variable assignments
     for i, (node_id, attrs) in enumerate(all_nodes.items()):
         var_name = f"n{i}"
-        props = ", ".join([f'"{k}":"{escape_value(v)}"' for k, v in attrs.items()])
+        props = []
+        for k, v in attrs.items():
+            prop = f"{k}:{escape_value(v)}"
+            props.append(prop)
+        props = ", ".join(props)
+
+        # props = ", ".join([f'{k}:"{escape_value(v)}"' for k, v in attrs.items()])
         node_type = attrs.get(node_type_key, "Node")
         # Convert node_type to PascalCase to avoid issues with spaces in queries
         node_type = (
@@ -480,8 +493,10 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
             if " " in node_type or "_" in node_type
             else node_type[0].upper() + node_type[1:]
         )
+        # node_id_val = f'"{node_id}"' if isinstance(node_id, str) else node_id
+        node_id_val = f'"{node_id}"'
         node_parts.append(
-            f'({var_name}:{node_type} {{"id":"{node_id}"{", " + props if props else ""}}})'
+            f'({var_name}:{node_type} {{id:{node_id_val}{", " + props if props else ""}}})'
         )
 
     # Create edge patterns using node variables
@@ -512,7 +527,7 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         relationship_type = str(relationship_type).upper()
 
         edge_parts.append(
-            f"({source_var})-[:{relationship_type}{edge_props_str}]-({target_var})"
+            f"({source_var})-[:{relationship_type}{edge_props_str}]->({target_var})"
         )
 
     # Build final command
