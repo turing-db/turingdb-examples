@@ -442,9 +442,6 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
 
     def escape_value(value):
         """Escape quotes and special characters in property values"""
-        # if not isinstance(value, str):
-        #     return value
-
         import re
 
         value_str = str(value)
@@ -462,30 +459,37 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         )
         # Clean up multiple spaces
         value_str = re.sub(r"\s+", " ", value_str).strip()
-        return f'"{value_str}"'
+        return value_str
 
     # Collect all unique nodes
     all_nodes = {}
     for node_id, attrs in G.nodes(data=True):
         all_nodes[node_id] = attrs
 
-    # Build single CREATE query
-    node_parts = []
-    edge_parts = []
+    commands = []
 
     # TODO: Set properties type to correct one depending on one in networkx graph
     # ...
 
-    # Create node variable assignments
+    def format_prop_key(k):
+        if " " in k:
+            return f"`{k}`"
+        return k
+
+    def format_prop_val(v):
+        if isinstance(v, str):
+            return f'"{escape_value(v)}"'
+        return v
+
+    # Create nodes first
+    node_parts = []
     for i, (node_id, attrs) in enumerate(all_nodes.items()):
-        var_name = f"n{i}"
         props = []
         for k, v in attrs.items():
-            prop = f"{k}:{escape_value(v)}"
+            prop = f"{format_prop_key(k)}: {format_prop_val(v)}"
             props.append(prop)
         props = ", ".join(props)
 
-        # props = ", ".join([f'{k}:"{escape_value(v)}"' for k, v in attrs.items()])
         node_type = attrs.get(node_type_key, "Node")
         # Convert node_type to PascalCase to avoid issues with spaces in queries
         node_type = (
@@ -493,18 +497,16 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
             if " " in node_type or "_" in node_type
             else node_type[0].upper() + node_type[1:]
         )
-        # node_id_val = f'"{node_id}"' if isinstance(node_id, str) else node_id
         node_id_val = f'"{node_id}"'
         node_parts.append(
-            f'({var_name}:{node_type} {{id:{node_id_val}{", " + props if props else ""}}})'
+            f'(:{node_type} {{id: {node_id_val}{", " + props if props else ""}}})'
         )
 
-    # Create edge patterns using node variables
-    node_to_var = {node_id: f"n{i}" for i, node_id in enumerate(all_nodes.keys())}
-    for source, target, edge_attrs in G.edges(data=True):
-        source_var = node_to_var[source]
-        target_var = node_to_var[target]
+    if node_parts:
+        commands.append("CREATE " + ",\n".join(node_parts))
 
+    # Create edges using MATCH ... CREATE ...
+    for source, target, edge_attrs in G.edges(data=True):
         # Extract relationship type from specified key
         relationship_type = edge_attrs.get(edge_type_key, "CONNECTED")
 
@@ -516,7 +518,10 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         # Build edge properties string
         edge_props = (
             ", ".join(
-                [f'"{k}":"{escape_value(v)}"' for k, v in filtered_edge_attrs.items()]
+                [
+                    f'{format_prop_key(k)}:"{format_prop_val(v)}"'
+                    for k, v in filtered_edge_attrs.items()
+                ]
             )
             if filtered_edge_attrs
             else ""
@@ -526,14 +531,92 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         # Convert relationship type to uppercase for Cypher convention
         relationship_type = str(relationship_type).upper()
 
-        edge_parts.append(
-            f"({source_var})-[:{relationship_type}{edge_props_str}]->({target_var})"
+        source_id = f'"{source}"'
+        target_id = f'"{target}"'
+
+        edge_command = (
+            f"MATCH (source {{id: {source_id}}}), (target {{id: {target_id}}}) "
+            f"CREATE (source)-[:{relationship_type}{edge_props_str}]->(target)"
         )
+        commands.append(edge_command)
 
-    # Build final command
-    all_parts = node_parts + edge_parts
-    if all_parts:
-        create_command = "CREATE " + ",\n".join(all_parts)
-        return create_command
+    return "\n".join(commands) if commands else ""
 
-    return ""
+
+def split_cypher_commands(cypher_commands, max_size_mb=1):
+    """
+    Split Cypher commands into chunks to avoid size limits.
+    Separates node creation from edge creation.
+
+    Args:
+        cypher_commands: Full Cypher command string
+        max_size_mb: Maximum size in MB per chunk (default 1MB)
+
+    Returns:
+        Dictionary with format:
+        {
+            "node_chunks": list of node creation chunks,
+            "edge_chunks": list of edge creation chunks
+        }
+    """
+    max_bytes = max_size_mb * 1000 * 1000 * 0.9999
+    lines = cypher_commands.strip().split("\n")
+
+    # Collect the full CREATE block and separate edges
+    create_block = []
+    edge_lines = []
+    in_create = False
+
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+
+        if line.startswith("CREATE"):
+            in_create = True
+            create_block.append(line[7:].strip())  # Remove 'CREATE ' prefix
+        elif line.startswith("MATCH"):
+            in_create = False
+            edge_lines.append(line)
+        elif in_create:
+            create_block.append(line)
+
+    # Parse individual nodes from the CREATE block
+    full_create = " ".join(create_block)
+    nodes = []
+    current_node = ""
+    paren_count = 0
+
+    for char in full_create:
+        if char == "(":
+            paren_count += 1
+            current_node += char
+        elif char == ")":
+            current_node += char
+            paren_count -= 1
+            if paren_count == 0 and current_node.strip():
+                nodes.append(current_node.strip().rstrip(",").strip())
+                current_node = ""
+        elif paren_count > 0:
+            current_node += char
+
+    # Chunk nodes by size
+    node_chunks = []
+    current_chunk = []
+    current_size = len("CREATE ".encode("utf-8"))
+
+    for node in nodes:
+        node_size = len(node.encode("utf-8")) + 2  # +2 for ",\n"
+
+        if current_size + node_size > max_bytes and current_chunk:
+            node_chunks.append("CREATE " + ",\n".join(current_chunk))
+            current_chunk = []
+            current_size = len("CREATE ".encode("utf-8"))
+
+        current_chunk.append(node)
+        current_size += node_size
+
+    if current_chunk:
+        node_chunks.append("CREATE " + ",\n".join(current_chunk))
+
+    return {"node_chunks": node_chunks, "edge_chunks": edge_lines}
