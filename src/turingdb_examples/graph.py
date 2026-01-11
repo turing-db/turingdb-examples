@@ -543,7 +543,7 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
     return "\n".join(commands) if commands else ""
 
 
-def split_cypher_commands(cypher_commands, max_size_mb=1):
+def split_cypher_commands(cypher_commands, max_size_mb=1, progress_bar=False):
     """
     Split Cypher commands into chunks to avoid size limits.
     Separates node creation from edge creation.
@@ -559,6 +559,9 @@ def split_cypher_commands(cypher_commands, max_size_mb=1):
             "edge_chunks": list of edge creation chunks
         }
     """
+    if progress_bar:
+        from tqdm.auto import tqdm
+
     max_bytes = max_size_mb * 1000 * 1000 * 0.9999
     lines = cypher_commands.strip().split("\n")
 
@@ -567,7 +570,7 @@ def split_cypher_commands(cypher_commands, max_size_mb=1):
     edge_lines = []
     in_create = False
 
-    for line in lines:
+    for line in tqdm(lines, total=len(lines), desc="Iterate lines"):
         line = line.strip()
         if not line:
             continue
@@ -587,7 +590,9 @@ def split_cypher_commands(cypher_commands, max_size_mb=1):
     current_node = ""
     paren_count = 0
 
-    for char in full_create:
+    for char in tqdm(
+        full_create, total=len(full_create.split(" ")), desc="Iterate full create"
+    ):
         if char == "(":
             paren_count += 1
             current_node += char
@@ -605,7 +610,7 @@ def split_cypher_commands(cypher_commands, max_size_mb=1):
     current_chunk = []
     current_size = len("CREATE ".encode("utf-8"))
 
-    for node in nodes:
+    for node in tqdm(nodes, total=len(nodes), desc="Split nodes into chunks"):
         node_size = len(node.encode("utf-8")) + 2  # +2 for ",\n"
 
         if current_size + node_size > max_bytes and current_chunk:
