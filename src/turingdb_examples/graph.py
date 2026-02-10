@@ -519,7 +519,7 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         edge_props = (
             ", ".join(
                 [
-                    f'{format_prop_key(k)}:"{format_prop_val(v)}"'
+                    f"{format_prop_key(k)}:{format_prop_val(v)}"
                     for k, v in filtered_edge_attrs.items()
                 ]
             )
@@ -540,6 +540,10 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         )
         commands.append(edge_command)
 
+    print(
+        f"Cypher query will create graph with {G.number_of_nodes():,} nodes and {G.number_of_edges():,} edges"
+    )
+
     return "\n".join(commands) if commands else ""
 
 
@@ -551,6 +555,7 @@ def split_cypher_commands(cypher_commands, max_size_mb=1, progress_bar=False):
     Args:
         cypher_commands: Full Cypher command string
         max_size_mb: Maximum size in MB per chunk (default 1MB)
+        progress_bar: Show progress bars (default False)
 
     Returns:
         Dictionary with format:
@@ -570,7 +575,8 @@ def split_cypher_commands(cypher_commands, max_size_mb=1, progress_bar=False):
     edge_lines = []
     in_create = False
 
-    for line in tqdm(lines, total=len(lines), desc="Iterate lines"):
+    lines_iter = tqdm(lines, desc="Iterate lines") if progress_bar else lines
+    for line in lines_iter:
         line = line.strip()
         if not line:
             continue
@@ -590,9 +596,12 @@ def split_cypher_commands(cypher_commands, max_size_mb=1, progress_bar=False):
     current_node = ""
     paren_count = 0
 
-    for char in tqdm(
-        full_create, total=len(full_create.split(" ")), desc="Iterate full create"
-    ):
+    full_create = (
+        tqdm(full_create, desc="Iterate create characters")
+        if progress_bar
+        else full_create
+    )
+    for char in full_create:
         if char == "(":
             paren_count += 1
             current_node += char
@@ -610,7 +619,8 @@ def split_cypher_commands(cypher_commands, max_size_mb=1, progress_bar=False):
     current_chunk = []
     current_size = len("CREATE ".encode("utf-8"))
 
-    for node in tqdm(nodes, total=len(nodes), desc="Split nodes into chunks"):
+    nodes_iter = tqdm(nodes, desc="Split nodes into chunks") if progress_bar else nodes
+    for node in nodes_iter:
         node_size = len(node.encode("utf-8")) + 2  # +2 for ",\n"
 
         if current_size + node_size > max_bytes and current_chunk:
