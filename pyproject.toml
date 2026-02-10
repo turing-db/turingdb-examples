@@ -53,4 +53,4 @@ addopts = [
 ]
 
 [tool.uv.sources]
-turingdb = { path = "../turingdb-sdk-python", editable = true }
+turingdb = { path = "../turingdb", editable = true }
