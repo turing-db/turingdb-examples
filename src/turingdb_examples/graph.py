@@ -437,7 +437,7 @@ def create_graph_from_df(
     return G
 
 
-def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="type"):
+def build_create_command_from_networkx(G, node_type_key=None, edge_type_key=None):
     """Build CREATE command from NetworkX object"""
 
     def escape_value(value):
@@ -490,7 +490,9 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
             props.append(prop)
         props = ", ".join(props)
 
-        node_type = attrs.get(node_type_key, "Node")
+        node_type = attrs.get(
+            node_type_key, node_type_key if node_type_key is not None else "Node"
+        )
         # Convert node_type to PascalCase to avoid issues with spaces in queries
         node_type = (
             "".join(x.title() for x in node_type.replace("_", " ").split())
@@ -508,7 +510,9 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
     # Create edges using MATCH ... CREATE ...
     for source, target, edge_attrs in G.edges(data=True):
         # Extract relationship type from specified key
-        relationship_type = edge_attrs.get(edge_type_key, "CONNECTED")
+        relationship_type = edge_attrs.get(
+            edge_type_key, edge_type_key if edge_type_key is not None else "CONNECTED"
+        )
 
         # Remove the type key from properties to avoid duplication
         filtered_edge_attrs = {
