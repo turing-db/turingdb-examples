@@ -437,7 +437,7 @@ def create_graph_from_df(
     return G
 
 
-def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="type"):
+def build_create_command_from_networkx(G, node_type_key=None, edge_type_key=None):
     """Build CREATE command from NetworkX object"""
 
     def escape_value(value):
@@ -450,6 +450,7 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         value_str = value_str.replace("\n", " ")
         value_str = value_str.replace("\r", " ")
         value_str = value_str.replace("\t", " ")
+        value_str = value_str.replace("\\", "")
         # Remove or replace other problematic characters
         value_str = re.sub(
             r"[^\w\s\-\.\,\:\;\(\)\[\]\{\}\/\@\#\$\%\&\*\+\=\<\>\?\!\~\`\|\\]",
@@ -465,31 +466,53 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
     for node_id, attrs in G.nodes(data=True):
         all_nodes[node_id] = attrs
 
-    # Build single CREATE query
-    node_parts = []
-    edge_parts = []
+    commands = []
 
-    # Create node variable assignments
+    # TODO: Set properties type to correct one depending on one in networkx graph
+    # ...
+
+    def format_prop_key(k):
+        if " " in k:
+            return f"`{k}`"
+        return k
+
+    def format_prop_val(v):
+        if isinstance(v, str):
+            return f'"{escape_value(v)}"'
+        return v
+
+    # Create nodes first
+    node_parts = []
     for i, (node_id, attrs) in enumerate(all_nodes.items()):
-        var_name = f"n{i}"
-        props = ", ".join([f'"{k}":"{escape_value(v)}"' for k, v in attrs.items()])
-        node_type = attrs.get(node_type_key, "Node")
+        props = []
+        for k, v in attrs.items():
+            prop = f"{format_prop_key(k)}: {format_prop_val(v)}"
+            props.append(prop)
+        props = ", ".join(props)
+
+        node_type = attrs.get(
+            node_type_key, node_type_key if node_type_key is not None else "Node"
+        )
         # Convert node_type to PascalCase to avoid issues with spaces in queries
         node_type = (
             "".join(x.title() for x in node_type.replace("_", " ").split())
             if " " in node_type or "_" in node_type
             else node_type[0].upper() + node_type[1:]
         )
-        node_parts.append(f'({var_name}:{node_type} {{"id":"{node_id}", {props}}})')
+        node_id_val = f'"{node_id}"'
+        node_parts.append(
+            f'(:{node_type} {{id: {node_id_val}{", " + props if props else ""}}})'
+        )
 
-    # Create edge patterns using node variables
-    node_to_var = {node_id: f"n{i}" for i, node_id in enumerate(all_nodes.keys())}
+    if node_parts:
+        commands.append("CREATE " + ",\n".join(node_parts))
+
+    # Create edges using MATCH ... CREATE ...
     for source, target, edge_attrs in G.edges(data=True):
-        source_var = node_to_var[source]
-        target_var = node_to_var[target]
-
         # Extract relationship type from specified key
-        relationship_type = edge_attrs.get(edge_type_key, "CONNECTED")
+        relationship_type = edge_attrs.get(
+            edge_type_key, edge_type_key if edge_type_key is not None else "CONNECTED"
+        )
 
         # Remove the type key from properties to avoid duplication
         filtered_edge_attrs = {
@@ -499,7 +522,10 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         # Build edge properties string
         edge_props = (
             ", ".join(
-                [f'"{k}":"{escape_value(v)}"' for k, v in filtered_edge_attrs.items()]
+                [
+                    f"{format_prop_key(k)}:{format_prop_val(v)}"
+                    for k, v in filtered_edge_attrs.items()
+                ]
             )
             if filtered_edge_attrs
             else ""
@@ -509,14 +535,107 @@ def build_create_command_from_networkx(G, node_type_key="type", edge_type_key="t
         # Convert relationship type to uppercase for Cypher convention
         relationship_type = str(relationship_type).upper()
 
-        edge_parts.append(
-            f"({source_var})-[:{relationship_type}{edge_props_str}]-({target_var})"
+        source_id = f'"{source}"'
+        target_id = f'"{target}"'
+
+        edge_command = (
+            f"MATCH (source {{id: {source_id}}}), (target {{id: {target_id}}}) "
+            f"CREATE (source)-[:{relationship_type}{edge_props_str}]->(target)"
         )
+        commands.append(edge_command)
 
-    # Build final command
-    all_parts = node_parts + edge_parts
-    if all_parts:
-        create_command = "CREATE " + ",\n".join(all_parts)
-        return create_command
+    print(
+        f"Cypher query will create graph with {G.number_of_nodes():,} nodes and {G.number_of_edges():,} edges"
+    )
 
-    return ""
+    return "\n".join(commands) if commands else ""
+
+
+def split_cypher_commands(cypher_commands, max_size_mb=1, progress_bar=False):
+    """
+    Split Cypher commands into chunks to avoid size limits.
+    Separates node creation from edge creation.
+
+    Args:
+        cypher_commands: Full Cypher command string
+        max_size_mb: Maximum size in MB per chunk (default 1MB)
+        progress_bar: Show progress bars (default False)
+
+    Returns:
+        Dictionary with format:
+        {
+            "node_chunks": list of node creation chunks,
+            "edge_chunks": list of edge creation chunks
+        }
+    """
+    if progress_bar:
+        from tqdm.auto import tqdm
+
+    max_bytes = max_size_mb * 1000 * 1000 * 0.9999
+    lines = cypher_commands.strip().split("\n")
+
+    # Collect the full CREATE block and separate edges
+    create_block = []
+    edge_lines = []
+    in_create = False
+
+    lines_iter = tqdm(lines, desc="Iterate lines") if progress_bar else lines
+    for line in lines_iter:
+        line = line.strip()
+        if not line:
+            continue
+
+        if line.startswith("CREATE"):
+            in_create = True
+            create_block.append(line[7:].strip())  # Remove 'CREATE ' prefix
+        elif line.startswith("MATCH"):
+            in_create = False
+            edge_lines.append(line)
+        elif in_create:
+            create_block.append(line)
+
+    # Parse individual nodes from the CREATE block
+    full_create = " ".join(create_block)
+    nodes = []
+    current_node = ""
+    paren_count = 0
+
+    full_create = (
+        tqdm(full_create, desc="Iterate create characters")
+        if progress_bar
+        else full_create
+    )
+    for char in full_create:
+        if char == "(":
+            paren_count += 1
+            current_node += char
+        elif char == ")":
+            current_node += char
+            paren_count -= 1
+            if paren_count == 0 and current_node.strip():
+                nodes.append(current_node.strip().rstrip(",").strip())
+                current_node = ""
+        elif paren_count > 0:
+            current_node += char
+
+    # Chunk nodes by size
+    node_chunks = []
+    current_chunk = []
+    current_size = len("CREATE ".encode("utf-8"))
+
+    nodes_iter = tqdm(nodes, desc="Split nodes into chunks") if progress_bar else nodes
+    for node in nodes_iter:
+        node_size = len(node.encode("utf-8")) + 2  # +2 for ",\n"
+
+        if current_size + node_size > max_bytes and current_chunk:
+            node_chunks.append("CREATE " + ",\n".join(current_chunk))
+            current_chunk = []
+            current_size = len("CREATE ".encode("utf-8"))
+
+        current_chunk.append(node)
+        current_size += node_size
+
+    if current_chunk:
+        node_chunks.append("CREATE " + ",\n".join(current_chunk))
+
+    return {"node_chunks": node_chunks, "edge_chunks": edge_lines}
