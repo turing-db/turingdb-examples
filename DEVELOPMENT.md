@@ -52,7 +52,7 @@ git checkout -b feature/new-example
 ### 2. Develop Your Content
 ```bash
 # Start Jupyter for notebook development
-uv run jupyter lab
+bash run_jupyter.sh
 
 # Work on your examples, notebooks, etc.
 # Save your work in Jupyter
@@ -219,7 +219,7 @@ MISTRAL_API_KEY=your_key_here
 ### Jupyter Issues
 
 **Can't start Jupyter:**
-- Use `uv run jupyter lab` (not system jupyter)
+- Use `bash run_jupyter.sh` (not system jupyter)
 - Ensure you're in the project directory
 - Check that dependencies are installed
 
