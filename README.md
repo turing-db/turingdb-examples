@@ -24,16 +24,13 @@ Welcome to the TuringDB Examples repository! This collection provides practical 
 
 3. **Start Jupyter Lab:**
    ```bash
-   uv run jupyter lab
+   bash run_jupyter.sh
    ```
-   
-   This will start the Jupyter server and display output like:
+
+   This will start the Jupyter server on port 8889 (no token required). Open your web browser and go to:
    ```
-   [I 2024-09-26 16:30:15.123 ServerApp] Jupyter Server is running at:
-   [I 2024-09-26 16:30:15.123 ServerApp] http://localhost:8888/lab?token=abc123...
+   http://localhost:8889/lab
    ```
-   
-   **Copy the URL** (starting with `http://localhost:8888/lab?token=...`) and paste it into your web browser to access Jupyter Lab.
 
 4. **Open and run the example notebooks** in `examples/notebooks/public_version/`
 
@@ -97,7 +94,7 @@ All dependencies are automatically managed and installed when you run `uv sync`.
 
 **Import errors**: Make sure you've run `uv sync` to install all dependencies
 
-**Jupyter not starting**: Ensure you're using `uv run jupyter lab` and not a system-wide jupyter installation
+**Jupyter not starting**: Ensure you're using `bash run_jupyter.sh` and not a system-wide jupyter installation
 
 **Missing data files**: Verify that CSV files exist in `examples/notebooks/public_version/data/`
 
