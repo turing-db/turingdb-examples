@@ -92,15 +92,16 @@ git push origin dev
 
 ### 6. When Ready for Production
 ```bash
-# Move stable examples to main via PR
-git checkout main
-git checkout -b move-example-to-main
-git checkout dev -- examples/notebooks/public_version/your_new_example.ipynb
-git add .
-git commit -m "Add [example name] to production"
-git push origin move-example-to-main
-# Create PR: move-example-to-main → main
+# Sync all production file changes from dev to main via a single PR
+bash sync_to_main.sh
 ```
+
+This script automatically:
+- Detects which files changed on `dev` vs `main` (excluding dev-only files)
+- Creates a branch off `main`, applies the changes, and opens a PR via `gh`
+- Returns you to `dev` when done
+
+Dev-only files (`DEVELOPMENT.md`, `.pre-commit-config.yaml`, `tests/`) are never synced.
 
 ## Testing
 
