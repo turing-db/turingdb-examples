@@ -51,6 +51,3 @@ addopts = [
     "--cov-report=html",
     "--cov-report=term-missing"
 ]
-
-[tool.uv.sources]
-turingdb = { path = "../turingdb", editable = true }
