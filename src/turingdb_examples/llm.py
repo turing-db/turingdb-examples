@@ -42,7 +42,7 @@ def query_llm(
         import anthropic
 
         client = anthropic.Anthropic(api_key=api_key)
-        model = model or "claude-3-5-haiku-latest"
+        model = model or "claude-haiku-4-5-20251001"
 
         response = client.messages.create(
             model=model,
