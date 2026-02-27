@@ -551,6 +551,124 @@ def build_create_command_from_networkx(G, node_type_key=None, edge_type_key=None
     return "\n".join(commands) if commands else ""
 
 
+def networkx_to_jsonl(G, graph_name, node_type_key=None, edge_type_key=None, data_dir=None):
+    """
+    Convert a NetworkX graph to JSONL format compatible with TuringDB's LOAD JSONL command.
+
+    Writes the file to ~/.turing/data/{graph_name}.jsonl (or data_dir/{graph_name}.jsonl).
+
+    Parameters
+    ----------
+    G : nx.Graph or nx.DiGraph
+        The NetworkX graph to convert.
+    graph_name : str
+        Base name used for the output filename ({graph_name}.jsonl).
+    node_type_key : str or None
+        Node attribute key whose value is used as the node label.
+        If the attribute is absent on a node, node_type_key itself is used as a
+        constant label. If None, defaults to "Node".
+    edge_type_key : str or None
+        Edge attribute key whose value is used as the relationship type.
+        If the attribute is absent on an edge, edge_type_key itself is used as a
+        constant type. If None, defaults to "CONNECTED".
+    data_dir : str or None
+        Directory to write the file to. Defaults to ~/.turing/data.
+
+    Returns
+    -------
+    str
+        The filename (without directory path) to pass to the LOAD JSONL command.
+    """
+    import json
+    import math
+    import os
+
+    if data_dir is None:
+        data_dir = os.path.expanduser("~/.turing/data")
+    os.makedirs(data_dir, exist_ok=True)
+
+    filename = f"{graph_name}.jsonl"
+    filepath = os.path.join(data_dir, filename)
+
+    def to_serializable(v):
+        """Convert value to a JSON-serializable Python native type."""
+        try:
+            import numpy as np
+            if isinstance(v, np.integer):
+                return int(v)
+            if isinstance(v, np.floating):
+                return None if np.isnan(v) else float(v)
+            if isinstance(v, np.bool_):
+                return bool(v)
+        except ImportError:
+            pass
+        if isinstance(v, float) and math.isnan(v):
+            return None
+        return v
+
+    def node_label(attrs):
+        raw = attrs.get(node_type_key, node_type_key) if node_type_key else "Node"
+        if raw is None:
+            return "Node"
+        raw = str(raw)
+        # Convert to PascalCase if the label contains spaces or underscores
+        if " " in raw or "_" in raw:
+            return "".join(w.title() for w in raw.replace("_", " ").split())
+        return raw[0].upper() + raw[1:]
+
+    def rel_type(attrs):
+        raw = attrs.get(edge_type_key, edge_type_key) if edge_type_key else "CONNECTED"
+        if raw is None:
+            return "CONNECTED"
+        return str(raw).upper()
+
+    node_id_map = {}
+
+    with open(filepath, "w", encoding="utf-8") as f:
+        # Write nodes
+        for int_id, (node_id, attrs) in enumerate(G.nodes(data=True)):
+            node_id_map[node_id] = int_id
+            label = node_label(attrs)
+
+            properties = {"id": str(node_id)}
+            for k, v in attrs.items():
+                sv = to_serializable(v)
+                if sv is not None:
+                    properties[k] = sv
+
+            f.write(json.dumps({
+                "type": "node",
+                "id": str(int_id),
+                "labels": [label],
+                "properties": properties,
+            }) + "\n")
+
+        # Write relationships
+        for rel_id, (source, target, edge_attrs) in enumerate(G.edges(data=True)):
+            rtype = rel_type(edge_attrs)
+
+            properties = {}
+            for k, v in edge_attrs.items():
+                if k == edge_type_key:
+                    continue
+                sv = to_serializable(v)
+                if sv is not None:
+                    properties[k] = sv
+
+            f.write(json.dumps({
+                "type": "relationship",
+                "id": str(rel_id),
+                "label": rtype,
+                "start": {"id": str(node_id_map[source])},
+                "end": {"id": str(node_id_map[target])},
+                "properties": properties,
+            }) + "\n")
+
+    print(f"JSONL file written to: {filepath}")
+    print(f"Graph: {G.number_of_nodes():,} nodes, {G.number_of_edges():,} edges")
+    return filename
+
+
 def split_cypher_commands(cypher_commands, max_size_mb=1, progress_bar=False):
     """
     Split Cypher commands into chunks to avoid size limits.
