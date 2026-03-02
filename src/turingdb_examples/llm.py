@@ -51,7 +51,8 @@ def query_llm(
             max_tokens=4096,
             temperature=temperature,
         )
-        return response.content[0].text
+        text_block = next(b for b in response.content if isinstance(b, anthropic.types.TextBlock))
+        return text_block.text
 
     else:
         raise ValueError(f"Unsupported provider: {provider}")
