@@ -221,12 +221,12 @@ def create_graph_from_df(
             if "attributes" in config and config["attributes"]:
                 if isinstance(config["attributes"], str):
                     required_cols.append(config["attributes"])
-                else:
+                elif isinstance(config["attributes"], list):
                     required_cols.extend(config["attributes"])
             if "edge_attributes" in config and config["edge_attributes"]:
                 if isinstance(config["edge_attributes"], str):
                     required_cols.append(config["edge_attributes"])
-                else:
+                elif isinstance(config["edge_attributes"], list):
                     required_cols.extend(config["edge_attributes"])
 
     # Check if all required columns exist in DataFrame
