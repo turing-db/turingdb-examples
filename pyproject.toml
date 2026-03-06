@@ -53,3 +53,8 @@ addopts = [
     "--cov-report=html",
     "--cov-report=term-missing"
 ]
+
+[tool.uv.workspace]
+members = [
+    "examples/reactome-vector-search",
+]
