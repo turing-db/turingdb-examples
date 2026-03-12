@@ -19,7 +19,7 @@ dependencies = [
     "pyvis>=0.3.2",
     "ruff>=0.13.2",
     "seaborn>=0.13.2",
-    "turingdb==1.22.1.dev202603090301",
+    "turingdb==1.23.0",
 ]
 
 keywords = ["turingdb", "examples", "database"]
