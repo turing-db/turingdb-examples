@@ -2322,7 +2322,7 @@ wheels = [
 
 [[package]]
 name = "turingdb"
-version = "1.22.1.dev202603090301"
+version = "1.23.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "auditwheel" },
@@ -2338,16 +2338,16 @@ dependencies = [
     { name = "prompt-toolkit" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c5/bf/e994f1f45c468e5c43e07735f3433df0f485d32589bf4cc46ae0a149a963/turingdb-1.22.1.dev202603090301-cp313-cp313-macosx_14_0_arm64.whl", hash = "sha256:6f88274770a40602d74fd1a14e03288f99142e008da8c8351afeaf258a8600fc", size = 7394668, upload-time = "2026-03-09T03:39:51.551Z" },
-    { url = "https://files.pythonhosted.org/packages/f0/ed/a8c82088857fb230095161c7c75e80724a7be31aff40e6a504161d1bb3db/turingdb-1.22.1.dev202603090301-cp313-cp313-macosx_15_0_arm64.whl", hash = "sha256:475b3fe8037536b78a6643e09713e6c414d4a05e9270d825ec52c19c9d600cf0", size = 7396243, upload-time = "2026-03-09T03:39:53.426Z" },
-    { url = "https://files.pythonhosted.org/packages/06/5f/973801ebbcadf044db9c4358cefe9a325510fd1defdcb8175f69795f53e7/turingdb-1.22.1.dev202603090301-cp313-cp313-macosx_26_0_arm64.whl", hash = "sha256:de201cd594bb0149011b64942e77fc74dbe19fd34e3c30a9d8d278e5af1f2a73", size = 7396173, upload-time = "2026-03-09T03:39:55.323Z" },
-    { url = "https://files.pythonhosted.org/packages/c6/52/53c254d95bb59ab40801f50403a0b9315761bc9f5dc74513d5168ef4bba3/turingdb-1.22.1.dev202603090301-cp313-cp313-manylinux_2_35_x86_64.whl", hash = "sha256:ef6d97366ddbe43bd2f91c2a3a94dbf347933ee1bd2f1ae1283fcf869fea3276", size = 9661516, upload-time = "2026-03-09T03:39:57.121Z" },
-    { url = "https://files.pythonhosted.org/packages/1a/23/f6606e5dae7cdc0b683beaffb82a58c7088430a67f76e20b749681450ec6/turingdb-1.22.1.dev202603090301-cp313-cp313-manylinux_2_39_x86_64.whl", hash = "sha256:6498c96a31df3d0c1a8a388694aee0004152ad6ccb2a3d006ff4496b2d0226a3", size = 10076252, upload-time = "2026-03-09T03:39:59.149Z" },
-    { url = "https://files.pythonhosted.org/packages/bd/00/1f536e8d31415013c7a0d944e07244909206267b5bae333711dea4cc9706/turingdb-1.22.1.dev202603090301-cp314-cp314-macosx_14_0_arm64.whl", hash = "sha256:01711e6411c99641fe63ad729b45fc57dd28c341db9e64ed47bf87f8c47ca995", size = 7394669, upload-time = "2026-03-09T03:40:00.994Z" },
-    { url = "https://files.pythonhosted.org/packages/6b/b5/5c146f3c7a061aae30c2b3c9fcca9781bc6ac52d1a79d44c612a51c6fa55/turingdb-1.22.1.dev202603090301-cp314-cp314-macosx_15_0_arm64.whl", hash = "sha256:19b4232a578df4123400ef442102a33bbc8c02edb17a09cdac2cc12c25c6f277", size = 7396246, upload-time = "2026-03-09T03:40:02.642Z" },
-    { url = "https://files.pythonhosted.org/packages/0a/4d/34fab69f05928894a936bafcb9fe5e4dfaf2a047aa5506be074b24a8f233/turingdb-1.22.1.dev202603090301-cp314-cp314-macosx_26_0_arm64.whl", hash = "sha256:b52db1087438c93ee444332c1b644c6a76e0da036fb765db3034985a543f40e4", size = 7396174, upload-time = "2026-03-09T03:40:04.197Z" },
-    { url = "https://files.pythonhosted.org/packages/a7/2d/7b5e01545254c02f027f74f12476eb956a6c241e6b725ffc60c864cd93fc/turingdb-1.22.1.dev202603090301-cp314-cp314-manylinux_2_35_x86_64.whl", hash = "sha256:2f95e496a6d0dbee1f4ac6d80a2e1be512207a742c40d826444d4834651c8810", size = 9661523, upload-time = "2026-03-09T03:40:06.138Z" },
-    { url = "https://files.pythonhosted.org/packages/5a/bf/a008a2a3f1bfea278e4f6393f41af672d9cf0765528fa4f8c4b73f6f8aad/turingdb-1.22.1.dev202603090301-cp314-cp314-manylinux_2_39_x86_64.whl", hash = "sha256:b95e638534acca875f501d1b8d7cbf7a953421f23ea837c586d6cd3bfb7c7096", size = 10076249, upload-time = "2026-03-09T03:40:08.203Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/e4/a7d3951d81768fc613ee3f528a1a904001b270d7bd6d38ae3cacacdf5055/turingdb-1.23.0-cp313-cp313-macosx_14_0_arm64.whl", hash = "sha256:ae5bd995fd4ceabe040ebdabffe9ab02351289cf6af78c7da286866ea5853732", size = 7397110, upload-time = "2026-03-11T19:32:08.366Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/09/b98fb24530f47c0144e57b17d173109860ef416de97c5e221eeaa6ca4308/turingdb-1.23.0-cp313-cp313-macosx_15_0_arm64.whl", hash = "sha256:8d9aebca019aee779a83727cfb125daa61f19d45798004e1ba8e4a9e66d51996", size = 7399336, upload-time = "2026-03-11T19:32:10.318Z" },
+    { url = "https://files.pythonhosted.org/packages/a4/eb/75433fa03eec142df511913027e3d1ef2f2ad67bc6926c2f88ce3b7edbef/turingdb-1.23.0-cp313-cp313-macosx_26_0_arm64.whl", hash = "sha256:9b2e53d106f4e7c7ea7ce2b6ad38570f17c5b64effc1072b5aa250a78108f2e5", size = 7399260, upload-time = "2026-03-11T19:32:12.556Z" },
+    { url = "https://files.pythonhosted.org/packages/4a/2c/8e1a99ff8fc054faf74e790d31ace537d8b47510325eabf6a0f697159c5c/turingdb-1.23.0-cp313-cp313-manylinux_2_35_x86_64.whl", hash = "sha256:17a7fdac5e0d0119a7522fdf4c00d6ca3b1cb7cba60bc77cf25b61b8c3d70592", size = 9672622, upload-time = "2026-03-11T19:32:14.769Z" },
+    { url = "https://files.pythonhosted.org/packages/dd/84/a2699e708da2d45f2927c1fbf0bed8119ce1f97b89f3c7ed903a4a474060/turingdb-1.23.0-cp313-cp313-manylinux_2_39_x86_64.whl", hash = "sha256:2cf83796f2399eccbdedaf737f6f2fe04d3298de6148c5ab379b95d5bb49636a", size = 10084502, upload-time = "2026-03-11T19:32:17.166Z" },
+    { url = "https://files.pythonhosted.org/packages/0d/51/2fc0ba62fd53962244988defd9cee2a51e128a5a9a13a86953fa013872cc/turingdb-1.23.0-cp314-cp314-macosx_14_0_arm64.whl", hash = "sha256:309d840cab30ab8c0d4d88fea10655046e929eede22f2e9fb5e7b33d7adb24fe", size = 7397108, upload-time = "2026-03-11T19:32:19.249Z" },
+    { url = "https://files.pythonhosted.org/packages/79/2e/6325f6b5f86117e3f9bd977f0198491fa6fd0dd2a704fe12c83b9d1d2ade/turingdb-1.23.0-cp314-cp314-macosx_15_0_arm64.whl", hash = "sha256:97fb275ae1700955feb4b9eacff72142aaaf8d7fb13ad4408bee294ae4e30f0b", size = 7399340, upload-time = "2026-03-11T19:32:20.923Z" },
+    { url = "https://files.pythonhosted.org/packages/8c/04/1db9cd36737e165e024b6a27ffac5110e48e8988b00a7f79d3efd3304140/turingdb-1.23.0-cp314-cp314-macosx_26_0_arm64.whl", hash = "sha256:bff9c76889ef21a527946ea4341b9bfee3c54907835efb6f0dba143ca8e5d48f", size = 7399262, upload-time = "2026-03-11T19:32:22.646Z" },
+    { url = "https://files.pythonhosted.org/packages/97/30/fe1e3aee74442d5b254d6322d6d42fa94c7c7ee595e57ed523c1ebac46b3/turingdb-1.23.0-cp314-cp314-manylinux_2_35_x86_64.whl", hash = "sha256:c4263ee013e53294d0cf450122da6f14f4ac48b9e75c3242a70c231e999d0cd7", size = 9672628, upload-time = "2026-03-11T19:32:24.608Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/36/b21bfdab6f68eda73acfdb83150af1651bdeca7c885e2c2b027ccbd46c14/turingdb-1.23.0-cp314-cp314-manylinux_2_39_x86_64.whl", hash = "sha256:13a8af7aa7ee69981b3d33dbe8506d82b55ce05565cc435b43870fa796582194", size = 10084505, upload-time = "2026-03-11T19:32:26.838Z" },
 ]
 
 [[package]]
@@ -2396,7 +2396,7 @@ requires-dist = [
     { name = "pyvis", specifier = ">=0.3.2" },
     { name = "ruff", specifier = ">=0.13.2" },
     { name = "seaborn", specifier = ">=0.13.2" },
-    { name = "turingdb", specifier = "==1.22.1.dev202603090301" },
+    { name = "turingdb", specifier = "==1.23.0" },
 ]
 
 [package.metadata.requires-dev]
