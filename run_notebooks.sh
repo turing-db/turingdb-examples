@@ -3,14 +3,15 @@ set -euo pipefail
 
 # ── Notebooks to run (edit this list to add/remove) ──────────────────────────
 NOTEBOOKS=(
-  london_transport_TfL.ipynb
-  healthcare_dataset.ipynb
-  CiteAb_antibody_data.ipynb
+  CiteAb_antibody_data.ipynb 
   crypto_orbitaal_fraud_detection.ipynb
-  paysim_financial_fraud_detection.ipynb
-  reactome.ipynb
-  supply_chain_eto-chip-explorer.ipynb
   integrate_rdf_file.ipynb
+  reactome.ipynb
+  french_corporate_network.ipynb
+  london_transport_TfL.ipynb
+  supply_chain_eto-chip-explorer.ipynb
+  healthcare_dataset.ipynb
+  paysim_financial_fraud_detection.ipynb
 )
 
 NOTEBOOK_DIR="examples/notebooks/public_version"
