@@ -43,6 +43,15 @@ Located in `examples/notebooks/public_version/`:
 - **London Transport Analysis** (`london_transport_TfL.ipynb`): Demonstrates TuringDB usage with real Transport for London data
 - Complete datasets included in the `data/` folder
 
+### 🔍 Reactome Vector Search
+
+Located in `examples/reactome-vector-search/`:
+
+- **Semantic search over Reactome** (`main.py`): Builds a vector index over the [Reactome](https://reactome.org/) biological pathway knowledge graph and answers natural-language queries using retrieval-augmented generation
+- Uses Ollama for local embeddings and TuringDB's vector index for similarity search
+- Multi-query expansion, cross-encoder re-ranking, and RAG answer generation — all running locally
+- Requires the Reactome dataset loaded into TuringDB (see [turing-bench](https://github.com/turing-db/turing-bench/) for instructions)
+
 ### 🔧 What You Get
 
 All examples work seamlessly with popular AI providers and include everything needed for data analysis and AI integration.
