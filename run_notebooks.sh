@@ -12,6 +12,7 @@ NOTEBOOKS=(
   supply_chain_eto-chip-explorer.ipynb
   healthcare_dataset.ipynb
   paysim_financial_fraud_detection.ipynb
+  vector_search.ipynb
 )
 
 NOTEBOOK_DIR="examples/notebooks/public_version"
